@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../../images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../../CSS/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../../CSS/responsive.css">
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+    <!-- Header -->
+    <header id="admin-header">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="../../images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+
+                            <ul class="nav navbar-nav pull-right">
+
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Dashboard</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria- expanded="false"><b> Notes</b>
+                                        <hr>
+                                    </a>
+                                    <div class="dropdown-menu width-notes">
+                                        <div class="dropdown-item item-01" href="#">Notes Under Review</div><br>
+                                        <div class="dropdown-item" href="#">Published Notes</div><br>
+                                        <div class="dropdown-item" href="#">Downloaded Notes</div><br>
+                                        <div class="dropdown-item" href="#">Rejected Notes</div><br>
+
+                                    </div>
+                                </li>
+                                <li><a class="smooth-scroll" href="#"><b>Members</b></a></li>
+                                <li><a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b>Reports</b>
+                                        <hr>
+                                    </a>
+                                    <div class="dropdown-menu width-reports">
+                                        <div class="dropdown-item item-01" href="#">Spam Reports</div><br>
+                                    </div>
+                                    <hr>
+                                </li>
+                                <li><a class="smooth-scroll" href="#"><b>Settings</b>
+                                        <hr>
+                                    </a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <img src="../../images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item" href="#">My Profile</div><br>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <img src="../../images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <hr>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Dashboard</b></a></li>
+                                <hr>
+                                <li>
+                                    <div id="mobile-menu-dropdown1" class="dropdown">
+                                        <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b> Notes</b></a>
+
+                                        <div class="dropdown-menu width-notes">
+                                            <div class="dropdown-item item-01" href="#">Notes Under Review</div><br>
+                                            <div class="dropdown-item" href="#">Published Notes</div><br>
+                                            <div class="dropdown-item" href="#">Downloaded Notes</div><br>
+                                            <div class="dropdown-item" href="#">Rejected Notes</div><br>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Members</b></a></li>
+                                <hr>
+
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b>Reports</b></a>
+
+                                        <div class="dropdown-menu width-reports">
+                                            <div class="dropdown-item item-01" href="#">Spam Reports</div><br>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <hr>
+
+                                <li><a class="smooth-scroll" href="contact.html"><b>Setting</b></a></li>
+                                <hr>
+                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+
+    <!-- Add Type Profile -->
+    <section id="add-type">
+        <div class="content-box-md content-box-sm">
+            <div class="container">
+                <div class="row margin-set">
+                    <div class="sub-heading">
+                        <h4>Add Type</h4>
+
+                    </div>
+                </div>
+
+                <div class="details">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group text-left">
+                                        <label>Type *</label>
+                                        <input type="text" class="form-control" name="first-name" placeholder="Enter Type" value="IT" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group text-left ">
+                                        <label>Description *</label>
+                                        <textarea class="form-control" id="description" value="" placeholder="Enter your description" required></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="margin-set">
+                    <button class="btn btn-sell" type="submit">submit</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Add Type Ends -->
+
+
+
+    <!-- Footer -->
+    <footer id="admin-footer" class="navbar-bottom navbar-fixed-bottom">
+        <hr>
+
+        <div class="row">
+            <div class="text text-left">
+                <p class="left-footer">
+                    Version: 1.1.24
+                </p>
+            </div>
+
+            <div class=" text-right">
+                <p class="right-footer">Copyright &copy; TatvaSoft All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+    <!-- JQuery -->
+    <script src="../../JS/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../JS/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../../JS/script.js"></script>
+
+</body></html>
