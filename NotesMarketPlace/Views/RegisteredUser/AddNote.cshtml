@@ -1,0 +1,504 @@
+﻿@model NotesMarketPlace.Models.AddNote
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+
+
+
+
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li>
+                                    <a class="smooth-scroll" href="searchNotes.html" target="_self">
+                                        <b>Search Notes</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>Sell Your Notes</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b><hr /></a></li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>FAQ</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>Contact Us</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item" href="#">My Profile</div><br>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <hr>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
+                                <hr>
+                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    <!-- Add Notes cover -->
+    <section id="addNotes">
+        <img src="~/images/Search/banner-with-overlay.jpg" alt="banner" class="img-responsive add">
+        <div id="add-content">
+            <div class="container text-center" id="add-content-inner">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="home-heading page-heading ">
+                            <h1>Add Notes</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Add Notes cover Ends -->
+    <!-- Basic book Details -->
+    <section id="basic-details">
+        <div class="content-box-md content-box-sm content-box-xs">
+            <div class="container">
+
+                <!-- Basic Note Details -->
+                <div class="sub-heading">
+                    <h4>Basic Note Details</h4>
+                </div>
+
+                <div class="details">
+                    @using (Html.BeginForm("AddNote","RegisteredUser",FormMethod.Post,new { enctype="multipart/form-data"}))
+                    {
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.Label("Title", "Title *", htmlAttributes: new { @class = "control-label" })
+                                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your note title" } })
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.Label("Category", "Category *", htmlAttributes: new { @class = "control-label" })
+                                    @Html.DropDownListFor(model => model.Category, new SelectList(Model.categories, "ID", "Name"), "Select your category", new { @class = "form-control" })
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                @Html.LabelFor(model => model.Display_Picture, "Upload Notes*", new { @style = "margin-top: 20px;" })
+                                <div class="show-pic">
+                                    <label for="Display_Picture">
+                                        <img src="~/images/User-Profile/upload.png" alt="Profile Picture">
+                                        <p id="Display_Picturefilename">Upload a picture</p>
+                                    </label>
+                                    @Html.TextBoxFor(model => model.Display_Picture, new { @type = "file", @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                @Html.LabelFor(model => model.FileName, "Upload Notes*", new { @style = "margin-top: 20px;" })
+                                <div class="show-pic">
+                                    <label for="FileName">
+                                        <img src="~/images/remainingImage-front/upload-note.png" alt="Profile Picture">
+                                        <p id="FileNamefilename">Upload your notes</p>
+                                    </label>
+                                    @Html.TextBoxFor(model => model.FileName, new { @type = "file", @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.Label("NoteType", "Type", htmlAttributes: new { @class = "control-label" })
+                                    @Html.DropDownListFor(model => model.NoteType, new SelectList(Model.types, "ID", "Name"), "Select your type", new { @class = "form-control" })
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.Label("Number_Of_Pages", "Number of Pages", htmlAttributes: new { @class = "control-label" })
+                                    @Html.EditorFor(model => model.Number_Of_Pages, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter number of note pages" } })
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group text-left ">
+                                    @Html.Label("Description", "Description *", htmlAttributes: new { @class = "control-label" })
+                                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @placeholder = "Enter your description" })
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <!-- Institution Information -->
+                        <div class="sub-heading" style="margin-top:30px;">
+                            <h4>Institution Information</h4>
+                        </div>
+
+                        <div class="details">
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group text-left">
+                                        @Html.Label("Country", "Country *", htmlAttributes: new { @class = "control-label" })
+                                        @Html.DropDownListFor(model => model.Country, new SelectList(Model.countries, "ID", "Name"), "Select your country", new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group text-left">
+                                        @Html.Label("University_Name", "Institution Name", htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.University_Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your institution name" } })
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Course Details -->
+                        <div class="sub-heading">
+                            <h4>Course Details</h4>
+                        </div>
+
+                        <div class="details">
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group text-left">
+                                        @Html.Label("Course", "Course Name", htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.Course, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your course name" } })
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group text-left">
+                                        @Html.Label("CourseCode", "Course Code", htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.CourseCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your course code" } })
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group text-left">
+                                        @Html.Label("Professor", "Professor / Lecturer", htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.Professor, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your professor name" } })
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- selling Information -->
+                        <div class="sub-heading">
+                            <h4>Selling Information</h4>
+                        </div>
+
+                        <div class="details">
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group text-left">
+                                                @Html.LabelFor(model => model.IsPaid,"Sell For*", htmlAttributes: new { @class = "control-label" })
+                                            </div>
+                                            <div class="left margin-right">
+                                                <div class="left">
+                                                    <input type="radio" id="free" name="purchase" value=false class="custom-control-input ">
+                                                </div>
+                                                <div class=" right margin-bottom">
+                                                    <label class="custom-control-label" for="free"><span>Free</span></label>
+                                                </div>
+                                            </div>
+
+                                            <div class="left">
+                                                <div class="left">
+                                                    <input type="radio" id="paid" name="purchase" value=true class="custom-control-input">
+                                                </div>
+                                                <div class=" right margin-bottom">
+                                                    <label class="custom-control-label form-check" for="paid"><span>Paid</span></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group text-left sell-price">
+                                                @Html.Label("SellingPrice", "Sell Price *", htmlAttributes: new { @class = "control-label" })
+                                                @Html.EditorFor(model => model.SellingPrice, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your professor name" } })
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.LabelFor(model => model.NotesPreview, "Notes Preview", new { @style = "margin-top: 20px;" })
+                                    <div class="show-pic">
+                                        <label for="NotesPreview">
+                                            <img src="~/images/remainingImage-front/upload-note.png" alt="Profile Picture">
+                                            <p id="NotesPreviewfilename">Upload a file</p>
+                                        </label>
+                                        @Html.TextBoxFor(model => model.NotesPreview, new { @type = "file", @class = "form-control" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <button class="btn btn-sell" type="submit">save</button>
+                            <button class="btn btn-sell margin-left" type="submit">@Html.ActionLink("PUBLISH", "DashBoard", "", new { @style = "color:#fff; text-decoration:none" })</button>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+    </section>
+    <!-- Basic book Details Ends -->
+    <!-- Footer -->
+    <footer class="text-left navbar-bottom">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-8 para">
+                    <p style="margin-left: 150px;">
+                        Copyright &copy; TatvaSoft All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-4 list">
+                    <ul class="social-list text-right" style="margin-right: 150px;">
+                        <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+
+
+    <script>
+        //For Profile Picture
+        var input_var = document.getElementById('Display_Picture');
+        var infoArea = document.getElementById('Display_Picturefilename');
+
+        //For Upload Notes
+        var input_img = document.getElementById('FileName');
+        var infoAreaimg = document.getElementById('FileNamefilename');
+
+        //For Preview Notes
+        var input_img1 = document.getElementById('NotesPreview');
+        var infoAreaimg1 = document.getElementById('NotesPreviewfilename');
+
+        if (input_var) {
+            input_var.addEventListener('change', showFileName);
+        }
+
+        if (input_img) {
+            input_img.addEventListener('change', showImgName);
+        }
+
+        if (input_img1) {
+            input_img1.addEventListener('change', showImgName1);
+        }
+
+        function showFileName(event) {
+
+            // the change event gives us the input it occurred in
+            var input_var = event.srcElement;
+
+            // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+            var fileName = input_var.files[0].name;
+
+            // use fileName however fits your app best, i.e. add it into a div
+            infoArea.textContent = 'Notes name: ' + fileName;
+        }
+        function showImgName(event) {
+
+            var input_img = event.srcElement;
+
+            var fileName = input_img.files[0].name;
+
+            infoAreaimg.textContent = 'Picture name: ' + fileName;
+        }
+        function showImgName1(event) {
+
+            var input_img1 = event.srcElement;
+
+            var fileName = input_img1.files[0].name;
+
+            infoAreaimg1.textContent = 'Picture name: ' + fileName;
+        }
+
+                //function confirmation_btn() {
+
+                //}
+    </script>
+
+
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+﻿@model NotesMarketPlace.Models.ContactUs
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet " href="~/Content/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/owl-carousel/owl.theme.default.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class="smooth-scroll" href="#"><b>Sell Your Notes</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class="smooth-scroll" href="#"><b>FAQ</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class="smooth-scroll" href="#"><b>Contact Us</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Login</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <hr>
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
+                                <hr>
+                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Login</b></button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Contact Us Heading -->
+    <section id="contact">
+        <img src="../../images/Search/banner-with-overlay.jpg" alt="banner" class="img-responsive contact">
+        <div id="contact-content">
+            <div class="container text-center" id="contact-content-inner">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="home-heading page-heading ">
+                            <h1>Contact Us</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Contact Us Ends -->
+
+    <!-- Get In Touch -->
+    <section id="get-in-touch">
+        <div class="content-box-md content-box-sm content-box-xs">
+            <div class="container">
+                <div id="get-in-touch-wrapper" class="row">
+
+                    <div class="sub-heading">
+                        <h4>Get in Touch</h4>
+                        <p><small>Let us know how to get back to you</small></p>
+                    </div>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <!-- Contact left -->
+                        <div class="col-md-6 col-sm-6 col-xs-12 padding" id="contact-form-left">
+
+                            <div class="col-md-12 col-sm-12 padding">
+                                @Html.Label("FullName", "Full Name *", htmlAttributes: new { @class = "control-label" })
+                                <div class="form-group">
+
+                                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your full name" } })
+                                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+
+                                </div><br />
+                            </div>
+
+
+                            <div class="col-md-12 col-sm-12 padding">
+                                @Html.Label("EmailID", "Email Address *", htmlAttributes: new { @class = "control-label" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your email address" } })
+                                    @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                                </div><br>
+                            </div>
+
+
+                            <div class="col-md-12 col-sm-12 padding">
+                                @Html.Label("Subject", "Subject *", htmlAttributes: new { @class = "control-label" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your subject" } })
+                                    @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                                </div><br>
+                            </div>
+
+                        </div>
+
+                        <!-- Contact Right -->
+                        <div class="col-md-6 col-sm-6 col-xs-12" id="contact-form-right">
+                            <div id="text-area" class="col-md-12 col-sm-12">
+                                @Html.Label("Comments", "Comments/ Questions *", htmlAttributes: new { @class = "control-label" })
+                                <div class="form-group">
+                                    @Html.TextAreaFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control", @placeholder = "Comments..." } })
+                                    @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="contact-btn">
+                            <button class="btn btn-submit" type="submit">Submit</button>
+                        </div>
+
+                    }
+                </div>
+
+
+                <div>
+                    @if (ViewBag.Message != null)
+                    {
+                        <strong style="color:green;">@ViewBag.Message</strong>
+
+
+                    }
+                </div>
+                
+
+
+
+
+            </div>
+    </section>
+    <!-- Get In Touch Ends -->
+
+    <!-- Footer -->
+    <footer class="text-left navbar-bottom">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-8 para">
+                    <p style="margin-left: 150px;">
+                        Copyright &copy; TatvaSoft All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-4 list">
+                    <ul class="social-list text-right" style="margin-right: 150px;">
+                        <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="~/Scripts/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/script.js"></script>
+
+</body>
+
+</html>
