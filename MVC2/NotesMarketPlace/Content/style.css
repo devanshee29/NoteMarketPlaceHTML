@@ -1,0 +1,3785 @@
+/*====================================
+    Default Theme
+--------------------------------------
+    Fonts: Open Sans
+--------------------------------------
+    Colors: 
+            Moon Yellow:    #f4c613
+            Grey       :    #212226
+            White Smoke:    #6255a5;
+            White      :    #fff
+            Black      :    #000
+======================================*/
+
+
+/*=======================================
+             Html, Body
+========================================*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #333333;
+}
+
+section {
+    background: #fff;
+    overflow: hidden;
+}
+
+hr {
+    margin-top: 0;
+}
+
+/*=======================================
+             Home
+========================================*/
+
+.dwnldBtn a:hover{
+    text-decoration:none;
+}
+#home {
+    background: none;
+    height: 620px;
+}
+
+.home-banner {
+    position: absolute;
+    width: 100%;
+    height: 620px;
+    z-index: -1;
+    background-size: cover;
+}
+
+#home-content {
+    width: 100%;
+    display: table;
+}
+
+#home-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 210px;
+}
+
+#home-text p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+/*=======================================
+                Buttons
+========================================*/
+.btn-general {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 0px 30px 0px;
+    height: 30px;
+    /* -webkit-transition: all .5s;
+    transition: all .5s;*/
+    line-height: 22px;
+    border-radius: 3px;
+    font-style: Bold(600);
+    margin-bottom: 0px;
+}
+
+.btn-size-01 {
+    width: 172px;
+}
+
+.btn-size-02 {
+    width: 150px;
+}
+
+.btn-home {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color:transparent;
+}
+
+.btn-work {
+    background: #6255a5;
+    color: #fff;
+}
+
+.btn-primary {
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    border-radius: 3px;
+    border: none;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 40px;
+    text-align: center;
+}
+
+/*=======================================
+                Heading
+========================================*/
+.home-heading {
+    font-size: 50px;
+    font-weight: bold(700);
+    line-height: 54px;
+    color: #fff;
+    display: inline-block;
+}
+
+.heading {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 600;
+    color: #6255a5;
+    display: block;
+}
+
+.page-heading {
+    margin-top: 200px;
+}
+
+.sub-heading h4 {
+    color: #6255a5;
+    margin: 0;
+    font-size: 34px;
+    font-weight: 600 !important;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+
+
+/*=======================================
+             Content Box
+========================================*/
+.content-box-lg {
+    padding: 60px 0;
+}
+
+.content-box-md {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0;
+}
+
+
+/*=======================================
+             About Us
+========================================*/
+#about {
+    margin: 0;
+}
+
+.about-right p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.about-right p:first-child {
+    padding-bottom: 50px;
+}
+
+/*=======================================
+             Work
+========================================*/
+#work {
+    background-color: #f4f4f4;
+}
+
+.work-01 {
+    padding-top: 50px;
+}
+
+.image {
+    margin-top: 40px;
+}
+
+.work-img {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .08);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .08);
+    width: 140px;
+    height: 140px;
+    margin: auto;
+}
+
+#work .work-01 h4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+}
+
+#work .work-01 p {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+/*=======================================
+             Customer
+========================================*/
+#customer .customer-01 {
+    padding-top: 50px;
+    margin: 0;
+}
+
+#customer .customer-detail {
+    padding: 40px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .08);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .08);
+}
+
+#customer .bottom-margin {
+    margin-bottom: 30px;
+}
+
+.customer-id {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-detail h4 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #6255a5;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.customer-detail .des {
+    margin: 0;
+    font-size: 16px;
+    line-height: 15px;
+    font-style: normal;
+}
+
+.customer-detail p {
+    margin-top: 15px;
+    line-height: 28px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/*=======================================
+             Footer
+========================================*/
+footer {
+    background-color: #fff;
+}
+
+footer p {
+    line-height: 5px;
+    margin-top: 15px;
+    height: 35px;
+    display: inline-block;
+}
+
+footer .text {
+    float: left;
+}
+
+ul.social-list {
+    padding: 0;
+}
+
+ul.social-list li {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+
+}
+
+ul.social-list li a {
+    border: 1px solid #fff;
+    width: 35px;
+    background-color: #6255a5;
+    color: #fff;
+    height: 35px;
+    display: inline-block;
+    line-height: 5px;
+    border-radius: 50%;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+    padding: 8px;
+
+    text-align: center;
+}
+
+/*=======================================
+        Nav-Dropdown
+========================================*/
+/* Dropdown menu */
+.dropdown-menu div {
+    font-style: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.width-dashboard {
+    width: 200px;
+    margin-left: -80px;
+    text-align: left;
+}
+
+div.dropdown-item.active,
+div.dropdown-item:hover {
+    background-color: #6255a5;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+div.dropdown-item.item-logout {
+    text-transform: uppercase;
+    color: #6255a5;
+    margin-bottom: 15px;
+}
+
+div.dropdown-item.item-01 {
+    margin-top: 15px;
+}
+
+div.dropdown-item.item-logout:active,
+div.dropdown-item.item-logout:hover {
+    color: #fff;
+}
+
+/*=======================================
+            Search Notes
+========================================*/
+#searchNotes {
+    height: 310px;
+    background: none;
+}
+
+#search-content {
+    width: 100%;
+    display: table;
+}
+
+#search-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: 310px;
+}
+
+/*  Search and filter Notes */
+
+#filter {
+    margin: 0;
+    padding: 0;
+}
+
+#search-detail {
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+input.empty {
+    font-family: FontAwesome !important;
+    font-style: normal;
+    text-decoration: inherit;
+    font-size: 14px;
+}
+
+.form-control {
+    font-family: "Open Sans", sans-serif;
+    color: #8a8a8a;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+    height: 40px;
+
+
+}
+
+.form-group {
+    margin: 0;
+}
+
+.form-search-01 {
+    margin-bottom: 20px;
+}
+input {
+    color:#000;
+}
+
+/*--  Book Details --*/
+
+/* rate */
+.rate {
+    float: left;
+    height: 30px;
+    padding: 0 0 0 30px;
+    margin: 0 0 15px 0;
+}
+
+.rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 22px;
+    color: #ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* book items */
+#notes .book-item {
+    border: 1px solid #d1d1d1;
+    padding: 0;
+    margin: 15px 20px 0 15px;
+    width: 30%;
+    border-radius: 5px;
+}
+
+
+#notes .book-item .item01 {
+    height: 110px;
+}
+
+#notes .book-item .item02 {
+    height: 154px;
+}
+
+#notes .book-item p {
+    float: left;
+    margin: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+}
+
+ul.book-details {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+}
+
+
+.book-details img {
+    width: 20px;
+    height: 20px;
+}
+.book-item #book-cove {
+    height:201px;
+}
+
+ul.book-details li {
+    margin-bottom: 15px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: flex;
+    font-size: 16px;
+}
+
+ul.book-details li span {
+    font-family: "Open-sans", sans-serif;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+ul.book-details li span.red {
+    color: #df3434;
+    margin-left: -1px;
+}
+
+#notes .book-item h6 {
+    padding: 30px 30px;
+    margin: 0;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 26px;
+    font-weight: 600;
+    color: #6255a5;
+}
+
+#notes .border {
+    border: 1px solid #d1d1d1;
+}
+
+/*  Page */
+#page {
+    padding: 0;
+}
+
+#page .pagination {
+    margin: 0;
+    padding: 50px 0;
+}
+
+.PagedList-skipToPrevious i {
+    margin-right: 2px !important;
+}
+.PagedList-skipToNext i {
+    margin-right: -2px !important;
+}
+#page .pagination li a {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 15px;
+    border: none;
+    margin: 0 10px 0 0;
+    z-index: 0;
+    padding: 10px 0 0 0;
+}
+
+    #page .pagination li a:hover,
+    #page .pagination li.active a,
+    #page .pagination li a:focus {
+        background: #6255a5 !important;
+        color: #fff !important;
+    }
+
+
+/*=======================================
+            Login
+========================================*/
+#login {
+    background: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#login .img-pre-login {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+}
+
+#login-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#login-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -30px;
+    padding-right: 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.panel-body {
+    padding: 40px;
+}
+
+.logo {
+    padding: 0;
+    align-content: center;
+
+}
+
+.logo img {
+    margin: auto;
+    padding-bottom: 25px;
+    margin-top: 20px;
+}
+
+.login-heading h2 {
+    margin: 0;
+    font-weight: 600;
+    color: #6255a5;
+    font-size: 30px;
+    line-height: 34px;
+}
+
+.login-heading p {
+    margin: 7px 0 15px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+#login label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#login input {
+    border: 1px solid #6255a5;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    height: 40px;
+
+}
+
+#login .form-group {
+    margin-top: 20px;
+}
+
+.border-red {
+    border: 1px solid #ff5e5e !important;
+}
+
+.blue {
+    color: #6255a5!important;
+}
+
+.fp {
+    font-size: 18px;
+    color:#6255a5;
+}
+a.actionLink :hover{
+    color:#6255a5!important;
+}
+
+.panel-body ::placeholder {
+    color: #8a8a8a;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#login .small {
+    color: #ff3636;
+    padding: 0;
+    margin: 10px 0 15px 0;
+    font-size: 14px;
+    line-height: 10px;
+    font-weight: 300;
+}
+
+#login .border-decoration {
+    text-decoration: none;
+    border-bottom:none;
+}
+
+.small,
+small {
+    font-size: 90%;
+}
+
+#login .signup {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+#login .margin-left {
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.form-check {
+    margin-bottom: 20px;
+}
+
+#login .form-check-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+    float: left;
+    margin-top:6px !important;
+}
+
+#password-field span {
+    height: 2px;
+    width: 2px;
+}
+
+/*=======================================
+            Sign Up
+========================================*/
+#signup {
+    background: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: auto;
+}
+
+#signup .img-pre-login {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+}
+
+#signup-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#signup-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#signup .check-circle {
+    list-style: none;
+    color: green;
+    padding: 0;
+    margin-bottom: 0px;
+
+}
+
+#signup .check {
+    font-family: "Open-Sans", sans-serif;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#signup label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#signup input {
+    border: 1px solid #6255a5;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    height: 40px;
+}
+
+#signup .form-group {
+    margin-top: 20px;
+}
+
+#signup .signup {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+#signup .margin-top {
+    margin-top: 20px;
+}
+
+#signup .border-decoration{
+    text-decoration:none;
+    border-bottom:none;
+}
+#signup .signup.ActionLink:hover {
+    text-decoration:none;
+    color:red;
+}
+
+.login-heading small {
+    font-size: 14px;
+}
+
+/*=======================================
+            Forgot Password
+========================================*/
+#forgotPassword {
+    background: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#forgotPassword .img-pre-login {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+}
+
+#forgotPassword-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#forgotPassword-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#forgotPassword label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#forgotPassword input {
+    border: 1px solid #6255a5;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#forgotPassword .form-group {
+    margin-top: 20px;
+}
+
+#forgotPassword .margin-top {
+    margin-top: 20px;
+}
+
+/*=======================================
+            Change Password
+========================================*/
+#changePassword {
+    background: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#changePassword .img-pre-login {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+}
+
+#changePassword-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#changePassword-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#changePassword label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#changePassword input {
+    border: 1px solid #6255a5;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#changePassword .form-group {
+    margin-top: 20px;
+}
+
+#changePassword .margin-top {
+    margin-top: 20px;
+}
+
+/*=======================================
+            Email Verification
+========================================*/
+#emailVerification {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+    #emailVerification a{
+        color:#fff!important;
+    }
+
+    #verification-wrapper {
+        display: block;
+        width: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+.verification-content {
+    background-color: #fff;
+    padding: 30px;
+}
+
+#verification-wrapper .verification-content h2 {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+#verification-wrapper .verification-content h6 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#verification-wrapper .verification-content p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+#verification-wrapper .verification-content .btn-submit {
+    width: 540px;
+    background-color: #6255a5;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    border-radius: 3px;
+    text-align: center;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*=======================================
+            noteDetails
+========================================*/
+#noteDetails {
+    background: none;
+    margin-top: 80px;
+}
+
+#noteDetails .padding-set {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.notes-details-heading h6 {
+    color: #6255a5;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold(600);
+    line-height: 28px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.note-details01-left img {
+    height: 300px;
+    width: 240px;
+}
+
+.note-details02-left h6 {
+    font-size: 18px;
+    line-height: 26px;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.note-details02-left p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+#noteDetails .btn-download {
+    color: #fff;
+    background-color: #6255a5;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    height: 40px;
+    width: 204px;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 9px;
+
+}
+
+#notes-details-right {
+    margin-left: 100px;
+}
+
+.notes-details-right01 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: normal(400);
+    line-height: 34px;
+    color: #333333;
+
+}
+
+.notes-details-right02 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 34px;
+    color: #6255a5;
+    text-align: right;
+    font-style: bold;
+
+}
+
+#notes-details-right p {
+    margin-left:
+}
+
+.notes-details-review {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: normal(400);
+    line-height: 16px;
+    color: #df3434;
+}
+
+#horizontal-line {
+    margin: 60px 155px 40px 155px;
+    border-color: #d1d1d1;
+    height: 3px;
+}
+
+.customer-review {
+    border: 1px solid #d1d1d1;
+    height: 450px;
+    width: 630px;
+    border-radius: 3px;
+    padding: 30px;
+    overflow: auto;
+    margin-left: -30px;
+}
+
+.customer-review-id {
+    height: 50px;
+    width: 50px;
+}
+
+.hr-customer-reviews {
+    margin-top: 20px;
+    margin-left: -100px;
+}
+
+.customer-review h6 {
+    font-size: 18px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: bold;
+    color: #333;
+    margin: 0;
+
+}
+
+.customer-review p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 5px;
+}
+
+.stars {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.rating-star-active {
+    color: #ffc700;
+}
+
+.rating-star-inactive {
+    color: antiquewhite;
+}
+
+
+/*===========================
+		Modal
+============================*/
+.modal {
+    margin-top: 120px;
+}
+
+.modal-dialog {
+    width: 600px !important;
+}
+
+.modal-header {
+    margin-top: 40px;
+}
+
+.modal-title-success img {
+    height: 63px;
+    width: 63px;
+}
+
+.modal-header img {
+    justify-items: center;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.modal-header h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: bold;
+    line-height: 30px;
+    color: #6255a5;
+    text-align: center;
+
+}
+
+#exampleModal01 .close {
+    margin-top: -40px;
+}
+
+.modal-body {
+    border: none;
+}
+
+.modal-body p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 22px;
+    color: #333333;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+#dear-person {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: bold;
+    line-height: 22px;
+    color: #333333;
+}
+
+/*===========================
+		Notes Preview Iframe
+============================*/
+
+.responsive-wrapper {
+    position: relative;
+    height: 0;
+    /* gets height from padding-bottom */
+    overflow: hidden;
+    /* put following styles (necessary for overflow and 
+     scrolling handling) inline in .embed-responsive-element-wrapper around iframe because not stable in CSS
+    -webkit-overflow-scrolling: touch; 
+                      overflow: auto; */
+}
+
+.responsive-wrapper img,
+.responsive-wrapper object,
+.responsive-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-style: none;
+    padding: 0;
+
+}
+
+/*
+    css particular to notes details iframe
+*/
+
+#Iframe-Cicis-Menu-To-Go {
+    width: 500px;
+    height: 400px;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+}
+
+/*
+   padding-bottom = h/w as %
+*/
+.responsive-wrapper-padding-bottom-90pct {
+    padding-bottom: 90%;
+}
+
+
+
+.center-block-horiz {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.set-margin-cicis-menu-to-go {
+    margin: 20px;
+}
+
+.set-padding-cicis-menu-to-go {
+    padding: 20px;
+}
+
+.set-border-cicis-menu-to-go {
+    border: 5px inset #4f4f4f;
+}
+
+set-box-shadow-cicis-menu-to-go {
+    -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+    -moz-box-shadow: 4px 4px 14px #4f4f4f;
+    box-shadow: 4px 4px 14px #4f4f4f;
+}
+
+/*=======================================
+            Add Notes
+========================================*/
+#addNotes {
+    height: 310px;
+    background: none;
+}
+
+#add-content {
+    width: 100%;
+    display: table;
+}
+
+#add-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.add {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: 310px;
+}
+
+#basic-details .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#basic-details label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#basic-details input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    height: 40px;
+
+}
+
+#basic-details .form-group {
+    margin-top: 20px;
+}
+
+#basic-details input[type="file"] {
+    height: 110px;
+}
+
+#basic-details textarea {
+    height: 153px;
+}
+
+#basic-details .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 150px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+}
+
+#basic-details .margin-left {
+    margin-left: 20px;
+}
+
+#basic-details .margin-right {
+    margin-right: 30px;
+}
+
+#basic-details .sell-price {
+    margin-top: 20px;
+}
+
+#basic-details input[type="radio"] {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d1d1d1;
+    margin-right: 5px;
+    padding: 0;
+    margin-top: 0;
+    ;
+}
+
+.margin-bottom {
+    margin-top: 5px;
+}
+
+#basic-details .show-pic {
+    height: 120px;
+}
+
+
+/*=======================================
+            User Profile
+========================================*/
+#userProfile {
+    height: 310px;
+    background: none;
+}
+
+#userProfile-content {
+    width: 100%;
+    display: table;
+}
+
+#userProfile-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.userProfile {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: 310px;
+}
+
+#basic-user-details input[type="tel"] {
+    width: 98%;
+}
+::-webkit-calendar-picker-indicator {
+        filter: invert(.6);
+        cursor: pointer;
+        border-radius: 4px;
+        opacity: .6;
+    }
+.tel{
+        padding: 0;
+}
+
+#basic-user-details .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#basic-user-details label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#basic-user-details input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    height: 40px;
+
+}
+
+#basic-user-details .form-group {
+    margin-top: 20px;
+}
+
+#basic-user-details input[type="file"] {
+    height: 110px;
+}
+
+#basic-user-details textarea {
+    height: 153px;
+}
+
+#basic-user-details .tel01 {
+    margin-left: 0;
+}
+
+
+#basic-user-details .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 150px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+}
+
+#basic-user-details .margin-left {
+    margin-left: 20px;
+}
+
+#basic-user-details .margin-right {
+    margin-right: 30px;
+}
+
+#basic-user-details .sell-price {
+    margin-top: 20px;
+}
+
+#basic-user-details input[type="radio"] {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d1d1d1;
+    margin-right: 5px;
+    padding: 0;
+    margin-top: 0;
+}
+
+.margin-bottom {
+    margin-top: 5px;
+}
+
+
+/*----------------------upload a file --------------*/
+.show-pic {
+    border: 1px solid #d1d1d1;
+    height: 110px;
+    border-radius: 3px;
+
+}
+
+.show-pic input {
+    display: none;
+    position: relative;
+}
+
+.show-pic img {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.show-pic p {
+    color: #ced4da !important;
+    font-size: 16px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+/*=======================================
+            Dashboard
+========================================*/
+#dashboard {
+    margin-top: 80px;
+}
+
+#dashboard .dashboard {
+    float: left;
+    display: block;
+}
+
+#dashboard .btn-add-note {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+    float: right;
+}
+
+.left-dashboard1 {
+    float: left;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-dashboard2 {
+    float: right;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-icon {
+    float: left;
+    margin-left: -20px;
+    margin-top: 10px;
+    padding-right: 0px;
+    z-index: -1;
+}
+
+.seach-bar span {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    height: 40px;
+    border-right: none !important;
+    margin-top: 3px;
+    padding-top: 8px;
+    padding-left: 8px;
+    margin-right: -6px;
+}
+
+#dashboard .notes-heading {
+    float: left;
+}
+
+#dashboard .seach-bar {
+    float: right
+}
+
+#dashboard .s-btn {
+    float: right;
+}
+
+#dashboard .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#dashboard table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#dashboard .margin-reset {
+    margin: 30px 0;
+}
+
+#dashboard .margin-set {
+    margin: 0 0 30px 0;
+}
+
+#dashboard .left-01 {
+    height: 151px;
+}
+
+#dashboard .my-earning {
+    vertical-align: middle;
+    padding: 0 30px;
+}
+
+#dashboard .my-earning h6 {
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #6255a5;
+}
+
+#dashboard .my-earning-details {
+    vertical-align: middle;
+    padding: 0 30px;
+
+}
+
+#dashboard .my-earning-details h4 {
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 700;
+    color: #6255a5;
+    font-family: "Open Sans", sans-serif;
+}
+
+#dashboard .my-earning-details span > h6 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #333;
+    font-weight: 400;
+}
+
+#dashboard .dashboard-details h6 {
+    font-size: 22px;
+    color: #6255a5;
+    font-weight: 600;
+    line-height: 28px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#dashboard .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#dashboard input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#dashboard .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/*  table */
+table td,
+th {
+    height: 60px;
+    padding-left: 15px !important;
+}
+
+.table > thead > tr > th {
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.pagination-01 {
+    margin: 30px 0 60px 0;
+}
+
+.pagination-02 {
+    margin-top: 30px;
+}
+
+/* Page */
+
+#dashboard-page {
+    padding: 0;
+}
+
+#dashboard-page .pagination {
+    margin: 0;
+    padding: 0;
+}
+
+#dashboard-page .pagination li a {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    margin: 0 2px 0 0;
+    z-index: 0;
+}
+
+#dashboard-page .pagination li a:hover,
+#dashboard-page .pagination li a:focus {
+    background: #6255a5;
+    color: #fff;
+}
+
+table {
+    padding: 30px 0;
+}
+
+table.shadow tr:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .1);
+    background: none;
+}
+
+#dashboard .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+
+/*=======================================
+            My Downloads
+========================================*/
+#my-download {
+    margin-top: 80px;
+}
+
+#my-download .dashboard {
+    float: left;
+    display: block;
+}
+
+#my-download .seach-bar {
+    float: right
+}
+
+#my-download .s-btn {
+    float: right;
+}
+
+#my-download table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#my-download .margin-reset {
+    margin: 30px 0;
+}
+
+#my-download .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+
+#my-download input {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#my-download .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#my-download .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+.eye {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.sr-no {
+    padding-left: 35px !important;
+}
+
+#my-download .width-view {
+    width: 220px;
+    margin-left: -200px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+div.dropdown-item {
+    padding-left: 20px;
+}
+
+/* Modal */
+
+.modal-dialog {
+    width: 500px !important;
+    margin: 245px auto;
+}
+
+.modal-header,
+.modal-footer {
+    border: none !important;
+}
+
+#exampleModalCente .modal-dialog {
+    padding: 10px 30px;
+}
+
+#exampleModalCenter .btn-submit {
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6255a5;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    float: left;
+    margin: 15px 0 20px 20px;
+}
+
+#exampleModalCenter textarea {
+    margin: 10px 30px 0 0px;
+}
+
+#exampleModalCenter textarea {
+    height: 100px;
+    font-size: 18px;
+    color: #333;
+}
+
+#exampleModalCenter label.comments {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 22px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#exampleModalCenter ::placeholder,
+    {
+    font-size: 18px;
+}
+
+#exampleModalCenter .rate {
+    margin-left: -15px;
+}
+
+#exampleModalCenter .rate > label {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#exampleModalCenter .modal-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #6255a5;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: -10px;
+}
+
+#exampleModalCenter .modal-header {
+    padding: 0;
+}
+
+#exampleModalCenter img {
+    margin-right: 20px;
+    margin-top: -35px;
+}
+
+/*=======================================
+            My Sold Notes
+========================================*/
+#my-sold {
+    margin-top: 80px;
+}
+
+#my-sold .dashboard {
+    float: left;
+    display: block;
+}
+
+#my-sold .seach-bar {
+    float: right
+}
+
+#my-sold .s-btn {
+    float: right;
+}
+
+#my-sold .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#my-sold table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#my-sold .margin-reset {
+    margin: 30px 0;
+}
+
+#my-sold .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#my-sold input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#my-sold .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#my-sold .width-view {
+    width: 220px;
+    margin-left: -190px;
+    padding-top: 20px;
+}
+
+/*=======================================
+            My Rejected Notes
+========================================*/
+#my-rejected {
+    margin-top: 80px;
+}
+
+#my-rejected .dashboard {
+    float: left;
+    display: block;
+}
+
+#my-rejected .seach-bar {
+    float: right
+}
+
+#my-rejected .s-btn {
+    float: right;
+}
+
+#my-rejected .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#my-rejected table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#my-rejected .margin-reset {
+    margin: 30px 0;
+}
+
+#my-rejected .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#my-rejected input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#my-rejected .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#my-rejected .width-view {
+    width: 220px;
+    margin-left: -190px;
+    padding-top: 20px;
+}
+
+.re-eye {
+    margin-right: 40px;
+}
+
+/*=======================================
+            Buyer Requests
+========================================*/
+#buyer-request {
+    margin-top: 80px;
+}
+
+#buyer-request .dashboard {
+    float: left;
+    display: block;
+}
+
+#buyer-request .seach-bar {
+    float: right
+}
+
+#buyer-request .s-btn {
+    float: right;
+}
+
+#buyer-request table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#buyer-request .margin-reset {
+    margin: 30px 0;
+}
+
+#buyer-request .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#buyer-request .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#buyer-request input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#buyer-request .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#buyer-request .width-view {
+    width: 220px;
+    margin-left: -190px;
+    padding-top: 20px;
+}
+
+
+/*=======================================
+            FAQ
+========================================*/
+#FAQ {
+    height: 310px;
+    background: none;
+}
+
+#FAQ-content {
+    width: 100%;
+    display: table;
+}
+
+#FAQ-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.FAQ {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: 310px;
+}
+
+#question .question {
+    margin-top: 30px;
+}
+
+
+
+#question .heading-margin {
+    margin: 60px 0 15px 0;
+}
+
+#question sub-heading {
+    padding: 0;
+}
+
+.card-header {
+    background-color: #f3f3f3;
+}
+
+    .card-header h2 {
+        font-family: "open sans", sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        color: #333333;
+        padding: 20px;
+    }
+
+.card-body {
+    font-family: "open sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+    padding: 0 20px;
+    padding-bottom: 15px;
+    border: 1px solid #d1d1d1;
+}
+
+.mb-0 {
+    margin: 0;
+}
+
+.btn-link {
+    padding: 0px;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+/*=======================================
+                Contact Us
+========================================*/
+#contact {
+    height: 310px;
+    background: none;
+}
+
+#contact-content {
+    width: 100%;
+    display: table;
+}
+
+#contact-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.contact {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: 310px;
+}
+
+#get-in-touch input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    height: 40px;
+    margin-bottom: 10px;
+}
+#get-in-touch label{
+    font-weight:400!important;
+}
+
+#get-in-touch {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+#contact-form-right textarea {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    height: 230px;
+    width:100%;
+}
+
+#get-in-touch p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    line-height: 22px;
+}
+
+#get-in-touch .padding {
+    padding: 0;
+}
+
+#get-in-touch .btn-submit {
+    color: #fff;
+    background-color: #6255a5;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    height: 40px;
+    width: 150px;
+    border-radius: 3px;
+    font-family: "Open Sans", sans-serif;
+    margin-left: -15px;
+    margin-top: 20px;
+    padding-top: 9px;
+}
+/*=======================================
+                Admin Footer
+========================================*/
+.left-footer {
+    margin-left: 280px;
+    padding: 0 auto;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.right-footer {
+    margin-right: 50px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+#admin-footer hr {
+    margin-bottom: 0 !important;
+}
+
+/*=======================================
+                Admin Header
+========================================*/
+#admin-header div.dropdown-item.item-logout {
+    font-weight: 600;
+}
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+    background-color: #fff !important;
+}
+
+.width-notes {
+    width: 200px;
+    margin-left: -65px;
+    text-align: left;
+}
+
+.width-reports {
+    width: 150px;
+    margin-left: -35px;
+    text-align: left;
+}
+
+/*=======================================
+                Admin Dashboard
+========================================*/
+#month select {
+    height: 40px;
+    margin-left: 10px
+}
+
+#month select.form-control {
+    margin-right: 0;
+    margin-left: 10px;
+    width: 170px;
+}
+
+#dashboard .width-view01 {
+    width: 200px;
+    margin-left: -190px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+
+/*=======================================
+                Admin My-Profile
+========================================*/
+#my-profile {
+    margin-top: 80px;
+}
+
+#my-profile .margin-set {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#my-profile .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#my-profile label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#my-profile input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#my-profile .form-group {
+    margin-top: 20px;
+}
+
+#my-profile input[type="file"] {
+    height: 110px;
+}
+
+#my-profile .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+    margin-bottom: 60px;
+    height: 40px;
+}
+
+#my-profile .tel01 {
+    margin-left: -15px;
+}
+
+#my-profile .tel {
+    width: 420px;
+}
+
+/*=======================================
+                Manage Administrator
+========================================*/
+#manageAdministrator {
+    margin-top: 80px;
+}
+
+#manageAdministrator .seach-bar {
+    float: right
+}
+
+#manageAdministrator .s-btn {
+    float: right;
+}
+
+#manageAdministrator table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#manageAdministrator .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#manageAdministrator .margin-right {
+    padding: 0 15px 0 0;
+}
+
+#manageAdministrator .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#manageAdministrator .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#manageAdministrator input {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#manageAdministrator .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#manageAdministrator .add-a-btn {
+    display: block;
+    float: left;
+}
+
+#manageAdministrator .btn-add-administrator {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6255a5;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+/*=======================================
+                Add Administrator
+========================================*/
+#add-administrator {
+    margin-top: 80px;
+}
+
+#add-administrator .margin-set {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#add-administrator .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#add-administrator label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#add-administrator input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#add-administrator .form-group {
+    margin-top: 20px;
+}
+
+#add-administrator input[type="file"] {
+    height: 110px;
+}
+
+#add-administrator .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 100px;
+    font-size: 18px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+    height: 40px;
+}
+
+#add-administrator .tel01 {
+    margin-left: -15px;
+}
+
+#add-administrator .tel {
+    width: 420px;
+}
+
+/*=======================================
+                Add Category
+========================================*/
+#add-category {
+    margin-top: 80px;
+}
+
+#add-category .margin-set {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#add-category .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#add-category label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#add-category input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#add-category .form-group {
+    margin-top: 20px;
+}
+
+#add-category .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+    height: 40px;
+}
+
+#add-category textarea {
+    height: 153px;
+    font-size: 18px;
+}
+
+/*=======================================
+                Add Coutry
+========================================*/
+#add-country {
+    margin-top: 80px;
+}
+
+#add-country .margin-set {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#add-country .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#add-country label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#add-country input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#add-country .form-group {
+    margin-top: 20px;
+}
+
+#add-country .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+    height: 40px;
+}
+
+/*=======================================
+                Add Type
+========================================*/
+#add-type {
+    margin-top: 80px;
+}
+
+#add-type .margin-set {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#add-type .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#add-type label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#add-type input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#add-type .form-group {
+    margin-top: 20px;
+}
+
+#add-type .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+    height: 40px;
+}
+
+#add-type textarea {
+    height: 153px;
+}
+
+/*=======================================
+        Manage System Configuration
+========================================*/
+#system-configuration {
+    margin-top: 80px;
+}
+
+#system-configuration .margin-set {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#system-configuration .details {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#system-configuration label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #333;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+#system-configuration input {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+#system-configuration .form-group {
+    margin-top: 20px;
+}
+
+#system-configuration input[type="file"] {
+    height: 110px;
+}
+
+#system-configuration .btn-sell {
+    margin-top: -30px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    font-family: "Open-Sans", sans-serif;
+    line-height: 18px;
+    margin-bottom: 60px;
+    height: 40px;
+}
+
+#system-configuration input[type="file"] {
+    height: 110px;
+}
+
+/*=======================================
+            Manage Country
+========================================*/
+#manageCountry {
+    margin-top: 80px;
+}
+
+#manageCountry .seach-bar {
+    float: right;
+}
+
+#manageCountry .s-btn {
+    float: right;
+}
+
+#manageCountry table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#manageCountry .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#manageCountry .margin-right {
+    padding: 0 15px 0 0;
+}
+
+#manageCountry .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#manageCountry .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#manageCountry input {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#manageCountry .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#manageCountry .add-a-btn {
+    display: block;
+    float: left;
+}
+
+#manageCountry .btn-add-administrator {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6255a5;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+/*=======================================
+            Manage Category
+========================================*/
+#manageCategory {
+    margin-top: 80px;
+}
+
+#manageCategory .seach-bar {
+    float: right;
+}
+
+#manageCategory .s-btn {
+    float: right;
+}
+
+#manageCategory table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#manageCategory .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#manageCategory .margin-right {
+    padding: 0 15px 0 0;
+}
+
+#manageCategory .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#manageCategory .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#manageCategory input {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#manageCategory .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#manageCategory .add-a-btn {
+    display: block;
+    float: left;
+}
+
+#manageCategory .btn-add-administrator {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6255a5;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+/*=======================================
+            Manage Type
+========================================*/
+#manageType {
+    margin-top: 80px;
+}
+
+#manageType .seach-bar {
+    float: right;
+}
+
+#manageType .s-btn {
+    float: right;
+}
+
+#manageType table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#manageType .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#manageType .margin-right {
+    padding: 0 15px 0 0;
+}
+
+#manageType .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#manageType input {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#manageType .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#manageType .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#manageType .add-a-btn {
+    display: block;
+    float: left;
+}
+
+#manageType .btn-add-administrator {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6255a5;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+/*=======================================
+            Members
+========================================*/
+#member .left {
+    float: left;
+}
+
+#member {
+    margin-top: 80px;
+}
+
+#member .seach-bar {
+    float: right;
+}
+
+#member .s-btn {
+    float: right;
+}
+
+#member table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#member .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#member .margin-right {
+    padding: 0 15px 0 0;
+}
+
+#member .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#member input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#member .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#member .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#member table {
+    overflow: scroll;
+}
+
+#member .width-view {
+    width: 190px;
+    margin-left: -170px;
+}
+
+/*=======================================
+            Spam Reports
+========================================*/
+#spamReport .left {
+    float: left;
+}
+
+#spamReport {
+    margin-top: 100px;
+}
+
+#spamReport .seach-bar {
+    float: right;
+}
+
+#spamReport .s-btn {
+    float: right;
+}
+
+#spamReport table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#spamReport .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#spamReport .margin-right {
+    padding: 0 15px 0px 0;
+}
+
+#spamReport .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#spamReport .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#spamReport input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#spamReport .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#spamReport table {
+    overflow: scroll;
+}
+
+#spamReport .width-view {
+    width: 190px;
+    margin-left: -170px;
+}
+
+/*=======================================
+            Published Notes
+========================================*/
+#publishedNotes .left {
+    float: left;
+}
+
+#publishedNotes {
+    margin-top: 100px;
+}
+
+#publishedNotes .seach-bar {
+    float: right;
+}
+
+#publishedNotes .s-btn {
+    float: right;
+}
+
+#publishedNotes table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#publishedNotes .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#publishedNotes .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#publishedNotes .margin-right {
+    padding: 0 30px 0 0;
+}
+
+#publishedNotes .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#publishedNotes input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#publishedNotes .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#publishedNotes table {
+    overflow: scroll;
+}
+
+#publishedNotes .width-view {
+    width: 190px;
+    margin-left: -170px;
+}
+
+#publishedNotes .seller {
+    width: 130px;
+    margin-left: 30px;
+    height: 40px;
+    border-radius: 3px;
+    color: #333;
+}
+
+#publishedNotes p {
+    margin-left: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#publishedNotes .eye {
+    margin: 0 40px 0 0;
+}
+
+#publishedNotes .nod {
+    width: 100px;
+}
+
+#publishedNotes .category {
+    width: 120px !important;
+}
+
+/*=======================================
+        Rejected Notes
+========================================*/
+#rejectedNotes .left {
+    float: left;
+}
+
+#rejectedNotes {
+    margin-top: 100px;
+}
+
+#rejectedNotes .seach-bar {
+    float: right;
+}
+
+#rejectedNotes .s-btn {
+    float: right;
+}
+
+#rejectedNotes table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#rejectedNotes .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#rejectedNotes .margin-right {
+    padding: 0 30px 0 0;
+}
+
+#rejectedNotes .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#rejectedNotes .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#rejectedNotes input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#rejectedNotes .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#rejectedNotes table {
+    overflow: scroll;
+}
+
+#rejectedNotes .width-view {
+    width: 190px;
+    margin-left: -170px;
+}
+
+#rejectedNotes .seller {
+    width: 130px;
+    margin-left: 30px;
+    height: 40px;
+    border-radius: 3px;
+    color: #333;
+}
+
+#rejectedNotes p {
+    margin-left: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#rejectedNotes .eye {
+    margin: 0 40px 0 -34px;
+}
+
+#rejectedNotes .seller01 {
+    width: 130px;
+}
+
+/*=======================================
+            Downloaded Notes
+========================================*/
+#downloadedNotes .left {
+    float: left;
+}
+
+#downloadedNotes {
+    margin-top: 100px;
+}
+
+#downloadedNotes .seach-bar {
+    float: right;
+}
+
+#downloadedNotes .s-btn {
+    float: right;
+}
+
+#downloadedNotes .search-options {
+    float: left;
+    margin-right: -25px;
+}
+
+#downloadedNotes table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#downloadedNotes .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#downloadedNotes .margin-right {
+    padding: 0 30px 0 0px;
+}
+
+#downloadedNotes .margin-top {
+    margin-top: 20px;
+}
+
+#downloadedNotes .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#downloadedNotes input {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#downloadedNotes select.form-control {
+    padding: 6px !important;
+}
+
+#downloadedNotes option {
+    font-size: 12px;
+}
+
+
+#downloadedNotes .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#downloadedNotes table {
+    overflow: scroll;
+}
+
+#downloadedNotes .width-view {
+    width: 190px;
+    margin-left: -170px;
+}
+
+#downloadedNotes .seller {
+    width: 130px;
+    margin-left: 30px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+#downloadedNotes p {
+    margin-left: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#downloadedNotes .eye {
+    margin: 0 40px 0 -20px;
+}
+
+#downloadedNotes .seller01 {
+    width: 130px;
+}
+
+#downloadedNotes .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+
+/*=======================================
+         Notes Under Review
+========================================*/
+#notesUnderReview .left {
+    float: left;
+}
+
+#notesUnderReview {
+    margin-top: 100px;
+}
+
+#notesUnderReview .seach-bar {
+    float: right;
+}
+
+#notesUnderReview .s-btn {
+    float: right;
+}
+
+#notesUnderReview .search-options {
+    float: left;
+    margin-right: -25px;
+}
+
+#notesUnderReview table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#notesUnderReview .margin-reset {
+    margin: 0 0 30px 0;
+    padding: 0 0 0 15px;
+}
+
+#notesUnderReview .margin-right {
+    padding: 0 30px 0 0px;
+}
+
+#notesUnderReview .margin-top {
+    margin-top: 20px;
+}
+
+#notesUnderReview .form-control {
+    width: 250px;
+    margin: 3px 10px 0 0;
+}
+
+#notesUnderReview input {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    height: 40px;
+}
+
+#notesUnderReview .btn-search {
+    width: 117px;
+    height: 40px;
+    margin-top: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #6255a5;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#notesUnderReview .btn-red {
+    background-color: red;
+}
+
+#notesUnderReview .btn-green {
+    background-color: green;
+}
+
+#notesUnderReview .btn-grey {
+    background-color: darkgrey;
+}
+
+#notesUnderReview .btn-action {
+    width: 90px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#notesUnderReview table {
+    overflow: scroll;
+}
+
+#notesUnderReview .width-view {
+    width: 190px;
+    margin-left: -170px;
+}
+
+#notesUnderReview .seller {
+    width: 130px;
+    margin-left: 30px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+#notesUnderReview p {
+    margin-left: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#notesUnderReview .eye {
+    margin: 0 40px 0 -20px;
+}
+
+#notesUnderReview .seller01 {
+    width: 130px;
+}
+
+#notesUnderReview .action {
+    width: 330px;
+}
+
+#notesUnderReview .border-none {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+/*=======================================
+         Notes Details Admin
+========================================*/
+#noteDetails .delete {
+    margin-top: -50px;
+}
+
+#noteDetails .notes-preview {
+    height: 508px;
+}
+
+/*=======================================
+         Member Details Admin
+========================================*/
+#memberDetails {
+    margin-top: 80px;
+}
+
+#memberDetails .vr {
+    border-right: 1px solid #d1d1d1;
+    padding-right: 0;
+}
+
+#memberDetails table.border {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px !important;
+}
+
+#memberDetails table {
+    overflow: scroll;
+}
+
+#memberDetails .width-view {
+    width: 190px;
+    margin-left: -190px;
+}
+
+#memberDetails .eye {
+    margin: 0 20px 0 -20px;
+}
+
+#memberDetails .notes-heading h6 {
+    color: #6255a5;
+    font-size: 24px;
+    font-family: "Open Sans";
+    font-weight: bold(600);
+    line-height: 28px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#memberDetails hr {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#memberDetails .left02 {
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: normal(400);
+    line-height: 34px;
+    color: #333333;
+
+}
+
+#memberDetails .right01 {
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 34px;
+    color: #6255a5;
+}

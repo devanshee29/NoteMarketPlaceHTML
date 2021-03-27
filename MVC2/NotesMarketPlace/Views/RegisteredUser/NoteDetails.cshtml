@@ -1,0 +1,528 @@
+﻿@model IEnumerable<NotesMarketPlace.Models.SellerNote>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li>
+                                    <a class="smooth-scroll" href="searchNotes.html" target="_self">
+                                        <b>Search Notes</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>Sell Your Notes</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>FAQ</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>Contact Us</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item" href="#">My Profile</div><br>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <hr>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
+                                <hr>
+                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    <!-- Notes Details -->
+
+    <section id="noteDetails">
+        <div class="content-box-md content-box-sm content-box-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="notes-details-heading">
+                            <h6>Notes Details</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- note Details Left-Side -->
+
+
+                <div class="row">
+                    <div id="img-section" class="col-md-3  col-sm-6  col-xs-6">
+                        <div class="note-details01-left">
+                            <img src="~/Uploadimg/@ViewBag.Display_Picture" alt="book-cover">
+                        </div>
+                    </div>
+                    <div id="book-description" class="col-md-3 col-sm-6 col-xs-6 padding-set">
+                        <div class="sub-heading">
+                            <h4 style="text-align:left;">@ViewBag.Title</h4>
+                        </div>
+                        <div class="note-details02-left">
+                            <h6>@ViewBag.Category</h6>
+                            <p>@ViewBag.Description</p>
+                        </div>
+
+                        @if (Session["EmailID"] == null)
+                        {
+                            if (ViewBag.IsPaid == true)
+                            {
+                                <button class="btn btn-download" href="#" title="Download Notes Details" onclick="AnonymousBtn() ">Download / $@ViewBag.SellingPrice</button>
+                                <br />
+                                <br />
+                                <p id="Anonymous" style="font-family:Open sans-serif,sans-serif; font-size:16px; font-weight:400;"></p>
+                            }
+                            else
+                            {
+                                <button class="btn btn-download" href="#" title="Download Notes Details" onclick="AnonymousBtn() ">Download</button>
+                                <br />
+                                <br />
+                                <p id="Anonymous" style="font-family:Open sans-serif,sans-serif; font-size:16px; font-weight:400;"></p>
+                            }
+                        }
+                        else
+                        {
+                            if (ViewBag.IsPaid == true)
+                            {
+                                using (Html.BeginForm("FreeDownload", "RegisteredUser", new { id = ViewBag.ID }, FormMethod.Post))
+                                {
+                                    <button class="btn btn-download" title="Download Notes Details">Download</button>
+                                }
+                            }
+                            else
+                            {
+                                <button class="btn btn-download" id="PaidDownload" title="Download Notes Details" data-target="#exampleModal01" data-toggle="modal">Download / $@ViewBag.SellingPrice</button>
+                            }
+                        }
+
+                    </div>
+                    <div id="book-other-info" class="col-md-6 col-sm-12 col-xs-12">
+                        <!-- note Details Right-Side -->
+
+                        <div id="notes-details-right">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Institution:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.University_Name
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Country:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Country
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Course Name:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Course
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Course Code:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.CourseCode
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Professor:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Professor
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Number of Pages:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Number_Of_Pages
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Approved Date:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.s1
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-5 notes-details-right01">
+                                    Rating:
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-7 notes-details-right02 padding-set">
+                                    100 Reviews
+                                    <!--<div class="rate">
+                                        <input type="radio" id="star5" name="rate" value="5" />
+                                        <label for="star5" title="text">5 stars</label>
+                                        <input type="radio" id="star4" name="rate" value="4" />
+                                        <label for="star4" title="text">4 stars</label>
+                                        <input type="radio" id="star3" name="rate" value="3" />
+                                        <label for="star3" title="text">3 stars</label>
+                                        <input type="radio" id="star2" name="rate" value="2" />
+                                        <label for="star2" title="text">2 stars</label>
+                                        <input type="radio" id="star1" name="rate" value="1" />
+                                        <label for="star1" title="text">1 star</label>
+                                    </div>-->
+                                    <!-- <div class="rate">
+
+                                                                   if (ViewBag.counts > 0)
+                                    {
+                                        ViewBag.rate
+
+                                        var i = 0;
+                                        for (; i <= ViewBag.rate - 2; i += 2)
+                                        {
+                                            <span id="1star"><img src="~/images/remainingImage-front/star.png" /></span>
+                                        }
+
+
+
+
+                                        for (; i <= 8; i += 2)
+                                        {
+                                            <span id="1star"><img src="~/images/remainingImage-front/star-white.png" /></span>
+                                        }
+                                    }
+
+                                                                </div> -->
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 notes-details-review">
+                                    5 Users marked this note as inappropriate
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr id="horizontal-line">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="notes-details-heading">
+                            <h6>Notes Preview</h6>
+                        </div>
+
+                        <div id="Iframe-Cicis-Menu-To-Go">
+                            <div class="responsive-wrapper responsive-wrapper-padding-bottom-90pct">
+                                <embed src="~/Uploadimg/@ViewBag.NotesPreview" style="width:498px; height:450px;" />
+                                <!-- <iframe src="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf">
+                                     <p style="font-size: 110%;"><em><strong>ERROR: </strong>
+                                             An &#105;frame should be displayed here but your browser version does not support &#105;frames.</em> Please update your browser to its most recent version and try again, or access the file <a href="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf">with this link.</a></p>
+                                 </iframe>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 padding-set">
+                        <div id="customer-review" class="notes-details-heading " style="margin-left: -30px">
+                            <h6>Customer Review</h6>
+                        </div>
+                        <div class="container customer-review">
+                            <!-- Customer Review 01 -->
+                            <div class="row">
+                                @for (int i = 0; i <= ViewBag.counts; i++)
+                                {
+
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <img src="~/Uploadimg/@ViewBag.Display_Picture[i]" alter="client" class="img-circle customer-review-id">
+
+                                    </div>
+
+                                    <div class="col-md-10 col-sm-10 col-xs-10">
+                                        <h6>@ViewBag.FullName[i]</h6>
+                                        <div class="stars">
+                                            <i class="fa fa-star rating-star-active"></i>
+                                            <i class="fa fa-star rating-star-active"></i>
+                                            <i class="fa fa-star rating-star-active"></i>
+                                            <i class="fa fa-star rating-star-active"></i>
+                                            <i class="fa fa-star rating-star-inactive"></i>
+                                        </div>
+
+                                        <p>@ViewBag.Comments[i]</p>
+                                        <hr class="hr-customer-reviews">
+                                    </div>
+
+                                }
+                                <!-- Customer Review 02 -->
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <img src="~/images/Homepage/client-2.jpg" alter="client" class="img-circle customer-review-id">
+
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <h6>Alice Ortiaz</h6>
+                                    <div class="stars">
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-inactive"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero tempora eius, veniam laborum praesentium est molestias unde 1500.</p>
+                                    <hr class="hr-customer-reviews">
+                                </div>
+
+
+                                <!-- Customer Review 03 -->
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <img src="~/images/Homepage/client-3.jpg" alter="client" class="img-circle customer-review-id">
+
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <h6>Sara Passmore</h6>
+                                    <div class="stars">
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-inactive"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero tempora eius, veniam laborum praesentium est molestias unde 1500.</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Details -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="~/images/NotesDetails/close.png">
+                    </button>
+                    <img src="~/images/NotesDetails/SUCCESS.png" class="modal-title-success pull-center" id="exampleModalLabel">
+                    <h4>Thank you for purchasing!</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="dear-person">Dear Smith,</p>
+                    <p>As this is paid notes - you need to pay to seller Rahil Shah offline. We will send him an email that you want to download this note. He may contact you further for payment process completion.</p>
+
+                    <p>In case, you have urgency,</p><br>
+                    <p>Please contact us on +9195377345959.</p>
+
+                    <p>Once he receives the payment and acknowledge us - selected notes you can see over my downloads tab for download.</p>
+
+                    <p>Have a good day.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal Ends -->
+    <!-- Footer -->
+    <footer class="text-left navbar-bottom">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-8 para">
+                    <p style="margin-left: 150px;">
+                        Copyright &copy; TatvaSoft All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-4 list">
+                    <ul class="social-list text-right" style="margin-right: 150px;">
+                        <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script>
+        function AnonymousBtn() {
+            document.getElementById("Anonymous").innerHTML = "Please " + '<a href="Login"> sign in/register</a>' + " to download this note. ";
+        }
+        $("#PaidDownload").click(function () {
+            if (confirm("Are you really want to Download this Paid Note?")) {
+                $(this).attr("data-toggle", "modal").attr("data-target", "#exampleModal01");
+                $.ajax({
+                    type: "post",
+                    dataType: "text",
+                    url: '@Url.Action("DashBoard","RegisteredUser")',
+                    data: { Id:@ViewBag.ID},
+                    success: function (res) {
+                        alert("Done");
+                    },
+                    error: function (err) {
+                        alert(err.responseText);
+                    }
+                });
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+
+    </script>
+
+
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/script.js"></script>
+
+</body>
+</html>

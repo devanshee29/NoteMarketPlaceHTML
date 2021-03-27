@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/nav-scroll.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="home.html">
+                            <img src="~/images/home/top-logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="searchNotes.html" target="_self"><b>Search Notes</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a href="" target="_self"><b>Sell Your Notes</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a href="" target="_self"><b>FAQ</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a href="" target="_self"><b>Contact Us</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class=" btn btn-login" href="" role="button"><b>Login</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
+                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
+                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
+                                <li><a class=" btn btn-login smooth-scroll" href="login.html" role="button"><b>Login</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Home -->
+    <section id="home">
+
+        <!-- Background Image -->
+        <img src="~/images/home/banner-with-overlay.jpg" alt="background-image" class="home-banner">
+
+
+        <!-- Home Content -->
+        <div id="home-content " class="container">
+
+            <div id="home-content-inner" class="text-left container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 col-xs-10">
+                        <div class="home-heading">
+                            <h1>Download Free/Paid Notes<br>or Sale your Book</h1>
+                        </div>
+
+                        <div id="home-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint et, dolorum quos culpa dolorum quos culpa.</p>
+                        </div>
+
+                        <div id="home-btn">
+                            <button class="btn btn-general btn-home btn-size-01 dwnldBtn" title="Learn More">@Html.ActionLink("learn more", "FAQ", "RegisteredUser", new { @class = "border-decoration", @style = "color:white;" })</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Home Ends -->
+
+    <!-- About Us -->
+    <section id="about">
+        <div class="content-box-lg content-box-md content-box-sm">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="heading">
+                            <h2>About<br>NotesMarketPlace</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-8 about-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quasi, quae! Nulla omnis iusto laudantium recusandae quaerat iure excepturi ab eligendi optio in. Ad, ab, perspiciatis! Voluptates vero at culpa!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quis. Dicta neque dolores earum ea excepturi possimus praesentium nobis voluptatum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- About Us Ends -->
+
+    <!-- Work -->
+    <section id="work">
+        <div class="content-box-md content-box-sm content-box-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="heading text-center col-md-12">
+                        <h2>How it works</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="work-01">
+                        <div class="col-md-6 text-center">
+                            <div class="work-img img-circle">
+                                <img class="image" src="~/images/Homepage/download.png" alt="download">
+                            </div>
+                            <h4>Download Free/Paid Notes</h4>
+                            <p>Get Material for your<br>Cource etc.</p>
+                            <div id="work-btn">
+                                <button class="btn btn-general btn-work btn-size-01 dwnldBtn" title="Download" >@Html.ActionLink("Download","SearchNotes", null, new { @class = "border-decoration" ,@style="color:white;"})</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="work-img img-circle">
+                                <img class="image" src="~/images/home/seller.png" alt="seller">
+                            </div>
+                            <h4>Seller</h4>
+                            <p>Upload and Download Cource<br>and Materials etc.</p>
+                            <div id="work-btn">
+                                @if (Session["EmailID"] == null)
+                                {
+                                    <button class="btn btn-general btn-work btn-size-02 dwnldBtn" title="sell Book">@Html.ActionLink("sell book", "Login", "RegisteredUser", new { @class = "border-decoration", @style = "color:white;" })</button>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-general btn-work btn-size-02 dwnldBtn" title="sell Book">@Html.ActionLink("sell book", "DashBord", "RegisteredUser", new { @class = "border-decoration", @style = "color:white;" })</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Work Ends -->
+
+    <!-- Customer -->
+    <section id="customer">
+        <div class="content-box-md content-box-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="heading text-center col-md-12 col-sm-12">
+                        <h2>What our Customers are Saying</h2>
+                    </div>
+                </div>
+                <div class="row customer-01">
+                    <!-- customer 01 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="customer-detail bottom-margin">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <img src="~/images/home/customer-1.png" class="img-responsive img-circle customer-id" alt="customer-01">
+                                </div>
+                                <div class="col-md-9 col-sm-8">
+                                    <h4>Walter Meller</h4>
+                                    <p class="des">Founder & CEO, Matrix Group</p>
+                                </div>
+                            </div>
+
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure."</p>
+                        </div>
+
+                    </div>
+
+                    <!-- customer 02 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="customer-detail bottom-margin">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <img src="~/images/home/customer-2.png" class="img-responsive img-circle customer-id" alt="customer-02">
+                                </div>
+                                <div class="col-md-9 col-sm-8">
+                                    <h4>Jonnie Riley</h4>
+                                    <p class="des">Employee, Curious Snakcs</p>
+                                </div>
+                            </div>
+
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure."</p>
+                        </div>
+                    </div>
+
+                    <!-- customer 03 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="customer-detail">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <img src="~/images/home/customer-3.png" class="img-responsive img-circle customer-id" alt="customer-03">
+                                </div>
+                                <div class="col-md-9 col-sm-8">
+                                    <h4>Amilia Luna</h4>
+                                    <p class="des">Teacher, Saint Joseph High School</p>
+                                </div>
+                            </div>
+
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure."</p>
+                        </div>
+                    </div>
+
+                    <!-- customer 04 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="customer-detail">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <img src="~/images/home/customer-4.png" class="img-responsive img-circle customer-id" alt="customer-04">
+                                </div>
+                                <div class="col-md-9 col-sm-8">
+                                    <h4>Daniel Cardos</h4>
+                                    <p class="des">Software Engineer, Infinitum Company</p>
+                                </div>
+                            </div>
+
+
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure amet explicabo qui iure."</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Customer Ends -->
+
+    <!-- Footer -->
+    <footer class="text-left navbar-bottom">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-8 para">
+                    <p style="margin-left: 150px;">
+                        Copyright &copy; TatvaSoft All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-4 list">
+                    <ul class="social-list text-right" style="margin-right: 150px;">
+                        <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/script.js"></script>
+
+</body></html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../../images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../../CSS/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../../CSS/responsive.css">
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="../../images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class="smooth-scroll" href="#"><b>Sell Your Notes</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
+                                <li><a class="smooth-scroll" href="#"><b>FAQ</b>
+                                        <hr>
+                                    </a></li>
+                                <li><a class="smooth-scroll" href="#"><b>Contact Us</b>
+                                        <hr>
+                                    </a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <img src="../../images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item" href="#">My Profile</div><br>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <img src="../../images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <hr>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
+                                <hr>
+                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
+                                <hr>
+                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- My Sold Notes -->
+    <section id="my-sold">
+        <div class="content-box-md content-box-sm content-box-xs">
+            <div class="container sold-wrapper">
+                <div class="row margin-reset">
+                    <div class="sub-heading dashboard">
+                        <h4>My Sold Notes</h4>
+
+                    </div>
+
+
+                    <div class="s-btn">
+                        <button class="btn btn-search" type="submit">search</button>
+                    </div>
+                    <div class="seach-bar">
+                        <span class="search-icon"><img src="../../images/Dashboard/search-icon.svg"></span>
+                        <form>
+                            <div>
+                                <input type="text" class="form-control border-none" id="search" name="search" placeholder="Search">
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table border shadow">
+                        <thead>
+                            <tr>
+                                <th scope="col">sr no.</th>
+                                <th scope="col">note title</th>
+                                <th scope="col">category</th>
+                                <th scope="col">buyer</th>
+                                <th scope="col">sell type</th>
+                                <th scope="col">price</th>
+                                <th scope="col">downloaded date/time</th>
+                                <th scope="col"> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sr-no">1</td>
+                                <td class="blue">Data Science</td>
+                                <td>Science</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Paid</td>
+                                <td>$250</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">2</td>
+                                <td class="blue">Accounts</td>
+                                <td>Commerce</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Free</td>
+                                <td>$0</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">3</td>
+                                <td class="blue">Social Studies</td>
+                                <td>Social</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Free</td>
+                                <td>$0</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">4</td>
+                                <td class="blue">AI</td>
+                                <td>IT</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Paid</td>
+                                <td>$158</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">5</td>
+                                <td class="blue">Lorem ipsum</td>
+                                <td>Lorem</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Free</td>
+                                <td>$0</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sr-no">6</td>
+                                <td class="blue">Data Science</td>
+                                <td>Science</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Paid</td>
+                                <td>$555</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">7</td>
+                                <td class="blue">Accounts</td>
+                                <td>Commerce</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Free</td>
+                                <td>$0</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">8</td>
+                                <td class="blue">Social Studies</td>
+                                <td>Social</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Free</td>
+                                <td>$0</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">9</td>
+                                <td class="blue">AI</td>
+                                <td>IT</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Paid</td>
+                                <td>$250</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td class="sr-no">10</td>
+                                <td class="blue">Lorem ipsum</td>
+                                <td>Lorem</td>
+                                <td>testting123@gmail.com</td>
+                                <td>Free</td>
+                                <td>$115</td>
+                                <td>27 Nov 2020, 11:24:34</td>
+                                <td><img src="../../images/Dashboard/eye.png" class="img1">
+                                    <div class="dropdown right">
+                                        <img src="../../images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                        <div class="dropdown-menu text-center width-view">
+                                            <div class="dropdown-item" href="#">Download Note</div><br>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="page" class="text-center">
+                    <div class="row ">
+
+                        <ul class="pagination pagination-lg justify-content-center">
+                            <li class="page-item"><a><i class="fa fa-angle-left"></i></a></li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- My Sold Notes Ends -->
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-left navbar-bottom">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-8 para">
+                    <p style="margin-left: 150px;">
+                        Copyright &copy; TatvaSoft All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-4 list">
+                    <ul class="social-list text-right" style="margin-right: 150px;">
+                        <li><a href="#"><img src="../../../images/remainingImage/facebook.png"></a></li>
+                        <li><a href="#"><img src="../../../images/remainingImage/twitter.png"></a></li>
+                        <li><a href="#"><img src="../../../images/remainingImage/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+    <!-- JQuery -->
+    <script src="../../JS/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../JS/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../../JS/script.js"></script>
+
+</body></html>

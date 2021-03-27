@@ -1,0 +1,144 @@
+﻿@model NotesMarketPlace.Models.User
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+</head>
+
+
+<body>
+
+    <!-- Sign Up -->
+    <section id="signup">
+        <img src="~/images/pre-login/banner-with-overlay.jpg" alt="banner" class="img-responsive img-pre-login">
+        <div id="signup-content">
+            <div id="signup-content-inner" class="container  text-center">
+                <div class="logo">
+                    <img src="~/images/pre-login/top-logo.png" alt="logo" class="img-responsive">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-8 col-xs-10 col-md-offset-4 col-sm-offset-2 col-xs-offset-1">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="text-center login-heading">
+                                    <h2>Create an Account</h2>
+                                    <p><small>Enter your details to signup</small></p>
+                                </div>
+
+                                @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+                                {
+                                    if (ViewBag.Message != null)
+                                    {
+                                        <div class="text-center">
+                                            <ul class="check-circle">
+                                                <li><i class="fa fa-check-circle"><span class="check"><small>Your accout has been successfully created.<br /> @ViewBag.Message</small></span></i></li>
+                                            </ul>
+                                        </div>
+                                    }
+
+                                }
+
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
+                                        <div>
+                                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your first name" } })
+                                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
+                                        <div>
+                                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your last name" } })
+                                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.EmailID, htmlAttributes: new { @class = "control-label" })
+                                        <div>
+                                            @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your email address" } })
+                                            @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                                            @Html.ValidationMessage("EmailExist", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                                        <div>
+                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your password", @id = "password-field" } })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                            <span class="field-icon toggle-password" toggle="#password-field"><img src="~/images/pre-login/eye.png"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label" })
+                                        <div>
+                                            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "Re-enter password", @id = "password-field1" } })
+                                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                            <span class="field-icon toggle-password" toggle="#password-field1"><img src="~/images/pre-login/eye.png"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-left">
+                                        <button class="btn btn-primary margin-top" type="submit">signup</button>
+                                    </div>
+                                    <div class="signup">
+                                        <small>Already have an account? @Html.ActionLink("Login", "Login", null, new { @class = "blue border-decoration" }) </small>
+                                    </div>
+
+
+                                    //  }
+
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sign Up Ends -->
+
+
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/script.js"></script>
+
+</body></html>
