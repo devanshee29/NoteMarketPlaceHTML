@@ -1,0 +1,432 @@
+﻿@model IEnumerable<NotesMarketPlace.Models.SellerNote>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+
+    <!-- Header -->
+    <header id="admin-header">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+
+                            <ul class="nav navbar-nav pull-right">
+
+                                <li>
+                                    <a class="smooth-scroll" href="searchNotes.html" target="_self">
+                                        <b>Dashboard</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria- expanded="false">
+                                        <b> Notes</b>
+                                        <hr>
+                                    </a>
+                                    <div class="dropdown-menu width-notes">
+                                        <div class="dropdown-item item-01" href="#">Notes Under Review</div><br>
+                                        <div class="dropdown-item" href="#">Published Notes</div><br>
+                                        <div class="dropdown-item" href="#">Downloaded Notes</div><br>
+                                        <div class="dropdown-item" href="#">Rejected Notes</div><br>
+
+                                    </div>
+                                </li>
+                                <li><a class="smooth-scroll" href="#"><b>Members</b></a></li>
+                                <li>
+                                    <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                        <b>Reports</b>
+                                        <hr>
+                                    </a>
+                                    <div class="dropdown-menu width-reports">
+                                        <div class="dropdown-item item-01" href="#">Spam Reports</div><br>
+                                    </div>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <a class="smooth-scroll" href="#">
+                                        <b>Settings</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item" href="#">My Profile</div><br>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+                                        <div class="dropdown-menu text-center width-dashboard">
+                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Downloads</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
+                                            <hr>
+                                            <div class="dropdown-item" href="#">Change Password</div><br>
+                                            <hr>
+                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+
+                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Dashboard</b></a></li>
+                                <hr>
+                                <li>
+                                    <div id="mobile-menu-dropdown1" class="dropdown">
+                                        <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b> Notes</b></a>
+
+                                        <div class="dropdown-menu width-notes">
+                                            <div class="dropdown-item item-01" href="#">Notes Under Review</div><br>
+                                            <div class="dropdown-item" href="#">Published Notes</div><br>
+                                            <div class="dropdown-item" href="#">Downloaded Notes</div><br>
+                                            <div class="dropdown-item" href="#">Rejected Notes</div><br>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+
+                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Members</b></a></li>
+                                <hr>
+
+                                <li>
+                                    <div id="mobile-menu-dropdown" class="dropdown">
+                                        <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b>Reports</b></a>
+
+                                        <div class="dropdown-menu width-reports">
+                                            <div class="dropdown-item item-01" href="#">Spam Reports</div><br>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <hr>
+
+                                <li><a class="smooth-scroll" href="contact.html"><b>Setting</b></a></li>
+                                <hr>
+                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    <!-- Notes Details -->
+
+    <section id="noteDetails">
+        <div class="content-box-md content-box-sm content-box-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="notes-details-heading">
+                            <h6>Notes Details</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- note Details Left-Side -->
+                <div class="row">
+                    <div id="img-section" class="col-md-3  col-sm-6  col-xs-6">
+                        <div class="note-details01-left">
+                            <img src="~/Uploadimg/@ViewBag.Display_Picture" alt="book-cover">
+                        </div>
+                    </div>
+                    <div id="book-description" class="col-md-3 col-sm-6 col-xs-6 padding-set">
+                        <div class="sub-heading">
+                            <h4 style="text-align:left;">@ViewBag.Title</h4>
+                        </div>
+                        <div class="note-details02-left">
+                            <h6>@ViewBag.Category</h6>
+                            <p>@ViewBag.Description</p>
+                        </div>
+
+                        <button class="btn btn-download" title="Download Notes Details"><a href='@Url.Action("Download", "RegisteredUser", new {path=ViewBag.path})' style="color:#fff;" class="btn-admin-download">Download</a></button>
+
+                    </div>
+                    <div id="book-other-info" class="col-md-6 col-sm-12 col-xs-12">
+                        <!-- note Details Right-Side -->
+
+                        <div id="notes-details-right">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Institution:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.University_Name
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Country:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Country
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Course Name:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Course
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Course Code:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.CourseCode
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Professor:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Professor
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Number of Pages:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.Number_Of_Pages
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right01">
+                                    Approved Date:
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 notes-details-right02 padding-set">
+                                    @ViewBag.s1
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-5 notes-details-right01">
+                                    Rating:
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-7 notes-details-right02 padding-set">
+                                    100 Reviews
+
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 notes-details-review">
+                                    5 Users marked this note as inappropriate
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr id="horizontal-line">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-6 col-sm-6">
+                        <div class="notes-details-heading">
+                            <h6>Notes Preview</h6>
+                        </div>
+
+                        <div id="Iframe-Cicis-Menu-To-Go">
+                            <div class="responsive-wrapper responsive-wrapper-padding-bottom-90pct">
+                                <embed src="~/Uploadimg/@ViewBag.NotesPreview" style="width:498px; height:450px;" />
+                                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 padding-set">
+                        <div id="customer-review" class="notes-details-heading" style="margin-left: -30px">
+                            <h6>Customer Review</h6>
+                        </div>
+                        <div class="container customer-review">
+                            <!-- Customer Review 01 -->
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <img src="../../images/Homepage/client-1.jpg" alter="client" class="img-circle customer-review-id">
+
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <h6>Richard Brown</h6>
+                                    <div class="stars">
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-inactive"></i>
+                                    </div>
+                                    <img class="eye right delete" src="../../images/Dashboard/delete.png">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero tempora eius, veniam laborum praesentium est molestias unde 1500.</p>
+                                    <hr class="hr-customer-reviews">
+                                </div>
+
+
+                                <!-- Customer Review 02 -->
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <img src="../../images/Homepage/client-2.jpg" alter="client" class="img-circle customer-review-id">
+
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+
+                                    <h6>Alice Ortiaz</h6>
+                                    <div class="stars">
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-inactive"></i>
+                                    </div>
+                                    <img class="eye right delete" src="../../images/Dashboard/delete.png">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero tempora eius, veniam laborum praesentium est molestias unde 1500.</p>
+                                    <hr class="hr-customer-reviews">
+                                </div>
+
+
+                                <!-- Customer Review 03 -->
+                                <div class="col-md-2 col-sm-2 col-sm-2 col-xs-2">
+                                    <img src="../../images/Homepage/client-3.jpg" alter="client" class="img-circle customer-review-id">
+
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 col-sm-10 col-xs-10">
+                                    <h6>Sara Passmore</h6>
+                                    <div class="stars">
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-active"></i>
+                                        <i class="fa fa-star rating-star-inactive"></i>
+                                    </div>
+                                    <img class="eye right delete" src="../../images/Dashboard/delete.png">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero tempora eius, veniam laborum praesentium est molestias unde 1500.</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Details -->
+    <!-- Footer -->
+    <footer id="admin-footer" class="navbar-bottom">
+        <hr>
+
+        <div class="row">
+            <div class="text text-left">
+                <p class="left-footer">
+                    Version: 1.1.24
+                </p>
+            </div>
+
+            <div class=" text-right">
+                <p class="right-footer">Copyright &copy; TatvaSoft All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+    <!-- JQuery -->
+    <script src="../../JS/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../JS/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../../JS/script.js"></script>
+
+</body>
+</html>

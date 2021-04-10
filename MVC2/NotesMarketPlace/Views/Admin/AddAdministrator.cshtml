@@ -1,0 +1,90 @@
+﻿@model NotesMarketPlace.Models.Addadministrator
+    
+@{ 
+    IEnumerable<NotesMarketPlace.Models.Country> country = ViewData["Country"] as IEnumerable<NotesMarketPlace.Models.Country>;
+}
+@{ 
+    ViewBag.Title = "AddAdministrator";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+    <!-- Add Administrator Profile -->
+    <section id="add-administrator">
+        <div class="content-box-md content-box-sm">
+            <div class="container add-administrator-wrapper">
+                <div class="row margin-set">
+                    <div class="sub-heading">
+                        <h4>Add Administrator</h4>
+
+                    </div>
+                </div>
+
+                <div class="details">
+                    @using (Html.BeginForm("Addadministrator","Admin",FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your first name" } })
+                                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your last name" } })
+                                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group text-left">
+                                        @Html.LabelFor(model => model.EmailID, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your email address" } })
+                                        @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group text-left ">
+                                        <div class="col-md-12 tel01">
+                                            @Html.LabelFor(model => model.Phone_Number, "Phone Number", htmlAttributes: new { @class = "control-label" })
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-3 tel01">
+                                            <select class="form-control" style="padding: 0;" id="Phone_number_Country_Code" name="Phone_number_Country_Code">
+                                                @foreach (NotesMarketPlace.Models.Country c in country)
+                                                {
+                                                    <option value="@c.CountryCode">+@c.CountryCode</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 tel">
+                                            @Html.EditorFor(model => model.Phone_Number, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your phone number", @type = "tel" } })
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="margin-set">
+                            <button class="btn btn-sell" type="submit" style="margin-top:30px;">submit</button>
+                        </div>
+                    }
+                    </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Add Administrator Ends -->
+
+
+ 

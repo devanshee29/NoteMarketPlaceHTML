@@ -1,0 +1,359 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+@if (Session["ID"] != null)
+{
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <!-- important meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Title -->
+        <title>Notes MarketPlace</title>
+
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+        <!-- Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="~/Content/style.css">
+        <link rel="stylesheet" href="~/Content/whiteNav.css">
+
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="~/Content/responsive.css">
+
+    </head>
+
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-fixed-top">
+                <div class="container-fluid white-nav-top">
+                    <div class="site-nav-wrapper">
+                        <div class="navbar-header">
+
+                            <!-- Mobile Menu Open Button -->
+                            <span id="mobile-nav-open-btn">&#9776;</span>
+
+                            <!-- Logo -->
+                            <a class="navbar-brand1" href="@Url.Action("Home","RegisteredUser")">
+                                <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                            </a>
+                        </div>
+
+                        <!-- Main Menu -->
+                        <div class="container">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav pull-right">
+                                    <li>
+                                        <a href="@Url.Action("SearchNotes", "RegisteredUser")">
+                                            <b>Search Notes</b>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("DashBoard", "RegisteredUser")" >
+                                            <b>Sell Your Notes</b>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li><a href="@Url.Action("BuyerRequests", "RegisteredUser")"><b>Buyer Requests</b><hr /></a></li>
+                                    <li>
+                                        <a href="@Url.Action("FAQ", "RegisteredUser")">
+                                            <b>FAQ</b>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Contact", "RegisteredUser")">
+                                            <b>Contact Us</b>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                            <div class="dropdown-menu text-center width-dashboard">
+                                                <div class="dropdown-item">@Html.ActionLink("My Profile", "UserProfile", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <div class="dropdown-item">@Html.ActionLink("My Downloads", "MyDownload", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <div class="dropdown-item">@Html.ActionLink("My Sold Notes", "MySoldNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <div class="dropdown-item">@Html.ActionLink("My Rejected Notes", "MyRejectedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <div class="dropdown-item">@Html.ActionLink("Change Password", "ChangePassword", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <div class="dropdown-item item-logout">@Html.ActionLink("Logout", "Logout", null, new { @class = "dropdown-box", @style = "color:#6255a5;" })</div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a class=" btn btn-login" href="@Url.Action("Logout","RegisteredUser")" role="button"><b>Logout</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- Mobile Menu -->
+                        <div id="mobile-nav">
+                            <!-- Mobile Menu Close Button -->
+                            <span id="mobile-nav-close-btn">&times;</span>
+                            <div id="mobile-nav-content">
+                                <ul class="nav">
+                                    <li>
+                                        <div id="mobile-menu-dropdown" class="dropdown">
+                                            <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+
+
+                                            <div class="dropdown-menu text-center width-dashboard">
+                                                <div class="dropdown-item item-01">@Html.ActionLink("My Profile", "UserProfile", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <hr>
+                                                <div class="dropdown-item">@Html.ActionLink("My Downloads", "MyDownload", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <hr>
+                                                <div class="dropdown-item">@Html.ActionLink("My Sold Notes", "MySoldNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <hr>
+                                                <div class="dropdown-item">@Html.ActionLink("My Rejected Notes", "MyRejectedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <hr>
+                                                <div class="dropdown-item">@Html.ActionLink("Change Password", "ChangePassword", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                                <hr>
+                                                <div class="dropdown-item item-logout">@Html.ActionLink("Logout", "Logout", null, new { @class = "dropdown-box", @style = "color:#6255a5;" })</div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <hr>
+                                    <li><a href="@Url.Action("SearchNotes", "RegisteredUser")"><b>Search Notes</b></a></li>
+                                    <hr>
+                                    <li><a href="@Url.Action("DashBoard", "RegisteredUser")"><b>Sell Your Notes</b></a></li>
+                                    <hr>
+                                    <li><a href="@Url.Action("BuyerRequests", "RegisteredUser")"><b>Buyer Requests</b></a></li>
+                                    <hr>
+                                    <li><a href="@Url.Action("FAQ", "RegisteredUser")"><b>FAQ</b></a></li>
+                                    <hr>
+                                    <li><a href="@Url.Action("Contact", "RegisteredUser")"><b>Contact Us</b></a></li>
+                                    <hr>
+                                    <li><button class=" btn btn-login" href="@Url.Action("Logout","RegisteredUser")"><b>Logout</b></button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Header Ends -->
+
+        @RenderBody()
+
+        <!-- Footer -->
+        <footer class="text-left navbar-bottom">
+            <hr>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 col-xs-8 para">
+                        <p style="margin-left: 150px;">
+                            Copyright &copy; TatvaSoft All rights reserved.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 col-sm-4 col-xs-4 list">
+                        <ul class="social-list text-right" style="margin-right: 150px;">
+                            <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
+                            <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
+                            <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Ends -->
+        <!-- JQuery -->
+        <script src="~/Scripts/jquery.min.js"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="~/Scripts/script.js"></script>
+
+    </body>
+
+</html>
+}
+
+else
+{
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Title -->
+    <title>Notes MarketPlace</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/images/home/favicon.ico">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet " href="~/Content/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/owl-carousel/owl.theme.default.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/whiteNav.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid white-nav-top">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- Logo -->
+                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li>
+                                    <a href="@Url.Action("SearchNotes", "RegisteredUser")">
+                                        <b>Search Notes</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Login", "RegisteredUser")">
+                                        <b>Sell Your Notes</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a c href="@Url.Action("FAQ", "RegisteredUser")">
+                                        <b>FAQ</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Contact", "RegisteredUser")">
+                                        <b>Contact Us</b>
+                                        <hr>
+                                    </a>
+                                </li>
+                                <li><a class=" btn btn-login" href="@Url.Action("Login","RegisteredUser")"><b>Login</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <hr>
+                                <li><a href="@Url.Action("SearchNotes", "RegisteredUser")"><b>Search Notes</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("Login", "RegisteredUser")"><b>Sell Your Notes</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("FAQ", "RegisteredUser")"><b>FAQ</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("Contact", "RegisteredUser")"><b>Contact Us</b></a></li>
+                                <hr>
+                                <li><a class=" btn btn-login" href="@Url.Action("Login","RegisteredUser")"><b>Login</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="text-left navbar-bottom">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-8 para">
+                    <p style="margin-left: 150px;">
+                        Copyright &copy; TatvaSoft All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-4 list">
+                    <ul class="social-list text-right" style="margin-right: 150px;">
+                        <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
+                        <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="~/Scripts/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/script.js"></script>
+
+</body>
+</html>
+}
