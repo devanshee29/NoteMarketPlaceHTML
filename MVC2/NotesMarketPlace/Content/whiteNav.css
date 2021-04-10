@@ -97,7 +97,6 @@ ul.navbar-nav > li > a:focus {
         background-color: none;
         font-size: 16px;
         font-weight: 700;
-        border-bottom: 3px solid #6255a5;
 }
 
 .white-nav-top ul.navbar-nav > li > a:hover hr,

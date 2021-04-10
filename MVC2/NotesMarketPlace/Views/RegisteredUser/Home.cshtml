@@ -11,10 +11,10 @@
     <!-- Title -->
     <title>Notes MarketPlace</title>
 
-    <!-- Favicon -->
+    <!-- Favicon-->
     <link rel="shortcut icon" href="~/images/home/favicon.ico">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
 
     <!-- Fontawesome -->
@@ -23,14 +23,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet " href="~/Content/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/owl-carousel/owl.theme.default.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Content/style.css">
     <link rel="stylesheet" href="~/Content/nav-scroll.css">
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="~/Content/responsive.css">
+    <!-- JQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
 
 </head>
+
 
 <body data-spy="scroll" data-target=".navbar" data-offset="65">
 
@@ -45,7 +53,7 @@
                         <span id="mobile-nav-open-btn">&#9776;</span>
 
                         <!-- Logo -->
-                        <a class="navbar-brand" href="home.html">
+                        <a class="navbar-brand smooth-scroll" href="#home">
                             <img src="~/images/home/top-logo.png" alt="Logo" style="margin-left: 50px;">
                         </a>
                     </div>
@@ -54,19 +62,31 @@
                     <div class="container">
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
-                                <li><a href="searchNotes.html" target="_self"><b>Search Notes</b>
+                                <li>
+                                    <a href="@Url.Action("SearchNotes", "RegisteredUser")">
+                                        <b>Search Notes</b>
                                         <hr>
-                                    </a></li>
-                                <li><a href="" target="_self"><b>Sell Your Notes</b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Login", "RegisteredUser")">
+                                        <b>Sell Your Notes</b>
                                         <hr>
-                                    </a></li>
-                                <li><a href="" target="_self"><b>FAQ</b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a c href="@Url.Action("FAQ", "RegisteredUser")">
+                                        <b>FAQ</b>
                                         <hr>
-                                    </a></li>
-                                <li><a href="" target="_self"><b>Contact Us</b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Contact", "RegisteredUser")">
+                                        <b>Contact Us</b>
                                         <hr>
-                                    </a></li>
-                                <li><a class=" btn btn-login" href="" role="button"><b>Login</b></a></li>
+                                    </a>
+                                </li>
+                                <li><a class=" btn btn-login" href="@Url.Action("Login","RegisteredUser")"><b>Login</b></a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,11 +98,16 @@
                         <span id="mobile-nav-close-btn">&times;</span>
                         <div id="mobile-nav-content">
                             <ul class="nav">
-                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
-                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
-                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
-                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
-                                <li><a class=" btn btn-login smooth-scroll" href="login.html" role="button"><b>Login</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("SearchNotes", "RegisteredUser")"><b>Search Notes</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("Login", "RegisteredUser")"><b>Sell Your Notes</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("FAQ", "RegisteredUser")"><b>FAQ</b></a></li>
+                                <hr>
+                                <li><a href="@Url.Action("Contact", "RegisteredUser")"><b>Contact Us</b></a></li>
+                                <hr>
+                                <li><a class=" btn btn-login" href="@Url.Action("Login","RegisteredUser")"><b>Login</b></a></li>
                             </ul>
                         </div>
                     </div>
@@ -92,7 +117,6 @@
         </nav>
     </header>
     <!-- Header Ends -->
-
     <!-- Home -->
     <section id="home">
 
@@ -126,7 +150,6 @@
 
     </section>
     <!-- Home Ends -->
-
     <!-- About Us -->
     <section id="about">
         <div class="content-box-lg content-box-md content-box-sm">
@@ -148,7 +171,6 @@
 
     </section>
     <!-- About Us Ends -->
-
     <!-- Work -->
     <section id="work">
         <div class="content-box-md content-box-sm content-box-sm">
@@ -167,7 +189,7 @@
                             <h4>Download Free/Paid Notes</h4>
                             <p>Get Material for your<br>Cource etc.</p>
                             <div id="work-btn">
-                                <button class="btn btn-general btn-work btn-size-01 dwnldBtn" title="Download" >@Html.ActionLink("Download","SearchNotes", null, new { @class = "border-decoration" ,@style="color:white;"})</button>
+                                <button class="btn btn-general btn-work btn-size-01 dwnldBtn" title="Download">@Html.ActionLink("Download", "SearchNotes", null, new { @class = "border-decoration", @style = "color:white;" })</button>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
@@ -194,7 +216,6 @@
 
     </section>
     <!-- Work Ends -->
-
     <!-- Customer -->
     <section id="customer">
         <div class="content-box-md content-box-sm">
@@ -285,7 +306,6 @@
 
 
     <!-- Customer Ends -->
-
     <!-- Footer -->
     <footer class="text-left navbar-bottom">
         <hr>
@@ -308,15 +328,17 @@
         </div>
     </footer>
     <!-- Footer Ends -->
-
-
     <!-- JQuery -->
     <script src="~/Scripts/jquery.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
 
+    <!-- Owl Carousel JS -->
+    <script src="~/Scripts/owl-carousel/owl.carousel.min.js"></script>
+
     <!-- Custom JS -->
     <script src="~/Scripts/script.js"></script>
 
-</body></html>
+</body>
+</html>

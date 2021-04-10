@@ -14,7 +14,6 @@ namespace NotesMarketPlace.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Last name is Required")]
         public string LastName { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Email is Required")]
         public string SecondaryEmailAddress { get; set; }
         public Nullable<System.DateTime> DOB { get; set; }
         public Nullable<int> Gender { get; set; }

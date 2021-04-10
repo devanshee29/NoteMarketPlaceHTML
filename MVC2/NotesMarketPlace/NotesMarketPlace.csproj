@@ -147,9 +147,15 @@
     <Compile Include="Models\Download.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Extended\Addadministrator.cs" />
+    <Compile Include="Models\Extended\AddCategory.cs" />
+    <Compile Include="Models\Extended\AddCountry.cs" />
     <Compile Include="Models\Extended\AddNote.cs" />
+    <Compile Include="Models\Extended\AddType.cs" />
+    <Compile Include="Models\Extended\Admin.cs" />
     <Compile Include="Models\Extended\Changepassword.cs" />
     <Compile Include="Models\Extended\ContactUs.cs" />
+    <Compile Include="Models\Extended\Myprofile.cs" />
     <Compile Include="Models\Extended\User.cs" />
     <Compile Include="Models\Extended\UserLogin.cs" />
     <Compile Include="Models\Extended\Userprofile.cs" />
@@ -462,8 +468,9 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\owl-carousel\owl.carousel.min.js" />
     <Content Include="Scripts\script.js" />
+    <Content Include="Views\Admin\ChangePassword.cshtml" />
     <None Include="Views\RegisteredUser\AddNote.cshtml" />
-    <None Include="Views\RegisteredUser\buyerRequests.cshtml" />
+    <None Include="Views\RegisteredUser\BuyerRequests.cshtml" />
     <None Include="Views\RegisteredUser\ChangePassword.cshtml" />
     <None Include="Views\RegisteredUser\Contact.cshtml" />
     <None Include="Views\RegisteredUser\DashBoard.cshtml" />
@@ -472,13 +479,34 @@
     <None Include="Views\RegisteredUser\ForgotPassword.cshtml" />
     <None Include="Views\RegisteredUser\Home.cshtml" />
     <None Include="Views\RegisteredUser\Login.cshtml" />
-    <None Include="Views\RegisteredUser\myDownload.cshtml" />
-    <None Include="Views\RegisteredUser\myRejectedNotes.cshtml" />
-    <None Include="Views\RegisteredUser\mySoldNotes.cshtml" />
+    <None Include="Views\RegisteredUser\MyDownload.cshtml" />
+    <None Include="Views\RegisteredUser\MyRejectedNotes.cshtml" />
+    <None Include="Views\RegisteredUser\MySoldNotes.cshtml" />
     <None Include="Views\RegisteredUser\NoteDetails.cshtml" />
     <None Include="Views\RegisteredUser\SearchNotes.cshtml" />
     <None Include="Views\RegisteredUser\Signup.cshtml" />
     <None Include="Views\RegisteredUser\UserProfile.cshtml" />
+    <None Include="Views\Admin\AddType.cshtml" />
+    <None Include="Views\Admin\AddAdministrator.cshtml" />
+    <None Include="Views\Admin\AddCategory.cshtml" />
+    <None Include="Views\Admin\AddCountry.cshtml" />
+    <None Include="Views\Admin\Dashboard.cshtml" />
+    <None Include="Views\Admin\DownloadedNotes.cshtml" />
+    <None Include="Views\Admin\ForgotPassword.cshtml" />
+    <None Include="Views\Admin\Login.cshtml" />
+    <None Include="Views\Admin\ManageAdministrator.cshtml" />
+    <None Include="Views\Admin\ManageCategory.cshtml" />
+    <None Include="Views\Admin\ManageCountry.cshtml" />
+    <None Include="Views\Admin\ManageSystemConfiguration.cshtml" />
+    <None Include="Views\Admin\ManageType.cshtml" />
+    <None Include="Views\Admin\Member.cshtml" />
+    <None Include="Views\Admin\MemberDetails.cshtml" />
+    <None Include="Views\Admin\MyProfile.cshtml" />
+    <None Include="Views\Admin\NoteDetails.cshtml" />
+    <None Include="Views\Admin\NotesUnderReview.cshtml" />
+    <None Include="Views\Admin\PublishedNotes.cshtml" />
+    <None Include="Views\Admin\RejectedNotes.cshtml" />
+    <None Include="Views\Admin\SpamReports.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -490,11 +518,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Admin.cshtml" />
+    <Content Include="Views\Shared\Front_user.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Uploadimg\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\fonts\glyphicons-halflings-regular.woff2" />

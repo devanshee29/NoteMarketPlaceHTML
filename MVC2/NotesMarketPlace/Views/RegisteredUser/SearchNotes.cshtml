@@ -1,132 +1,19 @@
 ﻿@model IPagedList<NotesMarketPlace.Models.SellerNote>
 @using PagedList;
 @using PagedList.Mvc;
-@{ 
+@{
     IEnumerable<NotesMarketPlace.Models.Country> country = ViewData["Country"] as IEnumerable<NotesMarketPlace.Models.Country>;
     IEnumerable<NotesMarketPlace.Models.NoteType> type = ViewData["Type"] as IEnumerable<NotesMarketPlace.Models.NoteType>;
     IEnumerable<NotesMarketPlace.Models.NoteCategory> category = ViewData["Category"] as IEnumerable<NotesMarketPlace.Models.NoteCategory>;
     var university = ViewData["University"] as IEnumerable<string>;
     var course = ViewData["Course"] as IEnumerable<string>;
 }
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+@{
+    ViewBag.Title = "SearchNotes";
+    Layout = "~/Views/Shared/Front_user.cshtml";
+}
 
-    <!-- important meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <!-- Title -->
-    <title>Notes MarketPlace</title>
-
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="~/images/home/favicon.ico">
-
-    <!-- Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
-
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
-
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet " href="~/Content/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/Content/owl-carousel/owl.theme.default.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/Content/style.css">
-    <link rel="stylesheet" href="~/Content/whiteNav.css">
-
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="~/Content/responsive.css">
-    <!-- JQuery -->
-    <script src="~/Scripts/jquery.min.js"></script>
-
-
-</head>
-
-
-<body data-spy="scroll" data-target=".navbar" data-offset="65">
-
-    <!-- Header -->
-    <header>
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid white-nav-top">
-                <div class="site-nav-wrapper">
-                    <div class="navbar-header">
-
-                        <!-- Mobile Menu Open Button -->
-                        <span id="mobile-nav-open-btn">&#9776;</span>
-
-                        <!-- Logo -->
-                        <a class="navbar-brand1 smooth-scroll" href="#home">
-                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
-                        </a>
-                    </div>
-
-                    <!-- Main Menu -->
-                    <div class="container">
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav pull-right">
-                                <li>
-                                    <a class="smooth-scroll" href="searchNotes.html" target="_self">
-                                        <b>Search Notes</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>Sell Your Notes</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>FAQ</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>Contact Us</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Login</b></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <!-- Mobile Menu -->
-                    <div id="mobile-nav">
-                        <!-- Mobile Menu Close Button -->
-                        <span id="mobile-nav-close-btn">&times;</span>
-                        <div id="mobile-nav-content">
-                            <ul class="nav">
-                                <hr>
-                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
-                                <hr>
-                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Login</b></button></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Ends -->
     <!-- Search Notes Heading -->
     <section id="searchNotes">
         <img src="~/images/Search/banner-with-overlay.jpg" alt="banner" class="img-responsive search">
@@ -286,7 +173,7 @@
                             <img src="~/Uploadimg/@n.Display_Picture" alt="book-cover" class=" img-responsive" style="height:201px;">
                         </div>
                         <div class="item01">
-                            <a href="@Url.Action("NoteDetails", "RegisteredUser", new {noteid=n.ID})"> <h6> @n.Title </h6></a>
+                            <a href="@Url.Action("NoteDetails", "RegisteredUser", new {id=n.ID})"> <h6> @n.Title </h6></a>
                         </div>
                         <div class="item02">
                             <ul class="book-details">
@@ -321,22 +208,30 @@
         </div>
     </section>
     <!-- notes Ends -->
+
     <div id="page" class="text-center">
-    @Html.PagedListPager(Model, i => Url.Action("SearchNotes", "RegisteredUser", new { i, search = Request.QueryString["search"],type=Request.QueryString["type"],
-                                                                                              category = Request.QueryString["category"],university=Request.QueryString["university"],
-                                                                                              course=Request.QueryString["course"],country=Request.QueryString["country"]
-                                                                                         }),
-   new PagedListRenderOptions {
-       ContainerDivClasses = null,
-       LiElementClasses = new string[] { "page-item1" },
-       UlElementClasses = new string[] { "pagination justify-content-center" },
-       LinkToNextPageFormat = "<i class='fa fa-chevron-right'></i>",
-       LinkToPreviousPageFormat = "<i class='fa fa-chevron-left'></i>",
-       MaximumPageNumbersToDisplay = 5,
-       DisplayEllipsesWhenNotShowingAllPageNumbers = false,
-       DisplayLinkToFirstPage = PagedListDisplayMode.Never,
-       DisplayLinkToLastPage = PagedListDisplayMode.Never
-   })
+        @Html.PagedListPager(Model, i => Url.Action("SearchNotes", "RegisteredUser", new
+        {
+            i,
+            search = Request.QueryString["search"],
+            type = Request.QueryString["type"],
+                                                                                                  category = Request.QueryString["category"],
+            university = Request.QueryString["university"],
+                                                                                                  course = Request.QueryString["course"],
+            country = Request.QueryString["country"]
+                                                                                             }),
+       new PagedListRenderOptions
+           {
+           ContainerDivClasses = null,
+           LiElementClasses = new string[] { "page-item1" },
+           UlElementClasses = new string[] { "pagination justify-content-center" },
+           LinkToNextPageFormat = "<i class='fa fa-chevron-right'></i>",
+           LinkToPreviousPageFormat = "<i class='fa fa-chevron-left'></i>",
+           MaximumPageNumbersToDisplay = 5,
+           DisplayEllipsesWhenNotShowingAllPageNumbers = false,
+           DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+           DisplayLinkToLastPage = PagedListDisplayMode.Never
+       })
     </div>
 
 
@@ -370,18 +265,3 @@
         }
     </script>
 
-
-    <!-- JQuery -->
-    <script src="~/Scripts/jquery.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Owl Carousel JS -->
-    <script src="~/Scripts/owl-carousel/owl.carousel.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="~/Scripts/script.js"></script>
-
-</body>
-</html>

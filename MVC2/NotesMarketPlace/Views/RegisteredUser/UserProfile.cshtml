@@ -4,480 +4,298 @@
     IEnumerable<NotesMarketPlace.Models.ReferenceData> type = ViewData["ReferenceData"] as IEnumerable<NotesMarketPlace.Models.ReferenceData>;
 
 }
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <!-- important meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <!-- Title -->
-    <title>Notes MarketPlace</title>
-
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="~/images/home/favicon.ico">
-
-    <!-- Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
-
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/Content/style.css">
-    <link rel="stylesheet" href="~/Content/whiteNav.css">
-
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="~/Content/responsive.css">
-
-</head>
-
-
-<body data-spy="scroll" data-target=".navbar" data-offset="65">
-
-    <!-- Header -->
-    <header>
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid white-nav-top">
-                <div class="site-nav-wrapper">
-                    <div class="navbar-header">
-
-                        <!-- Mobile Menu Open Button -->
-                        <span id="mobile-nav-open-btn">&#9776;</span>
-
-                        <!-- Logo -->
-                        <a class="navbar-brand1 smooth-scroll" href="#home">
-                            <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
-                        </a>
-                    </div>
-
-                    <!-- Main Menu -->
-                    <div class="container">
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav pull-right">
-                                <li>
-                                    <a class="smooth-scroll" href="searchNotes.html" target="_self">
-                                        <b>Search Notes</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>Sell Your Notes</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
-                                <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>FAQ</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>Contact Us</b>
-                                        <hr>
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="dropdown">
-                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
-
-
-                                        <div class="dropdown-menu text-center width-dashboard">
-                                            <div class="dropdown-item" href="#">My Profile</div><br>
-                                            <div class="dropdown-item" href="#">My Downloads</div><br>
-                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
-                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
-                                            <div class="dropdown-item" href="#">Change Password</div><br>
-                                            <div class="dropdown-item item-logout" href="#">Logout</div>
-
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <!-- Mobile Menu -->
-                    <div id="mobile-nav">
-                        <!-- Mobile Menu Close Button -->
-                        <span id="mobile-nav-close-btn">&times;</span>
-                        <div id="mobile-nav-content">
-                            <ul class="nav">
-                                <li>
-                                    <div id="mobile-menu-dropdown" class="dropdown">
-                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
-
-
-                                        <div class="dropdown-menu text-center width-dashboard">
-                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">My Downloads</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">Change Password</div><br>
-                                            <hr>
-                                            <div class="dropdown-item item-logout" href="#">Logout</div>
-
-                                        </div>
-                                    </div>
-                                </li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Search Notes</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Sell Your Notes</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Buyer Requests</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="FAQ.html"><b>FAQ</b></a></li>
-                                <hr>
-                                <li><a class="smooth-scroll" href="contact.html"><b>Contact Us</b></a></li>
-                                <hr>
-                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Ends -->
-    <!-- User Profile cover -->
-    <section id="userProfile">
-        <img src="~/images/Search/banner-with-overlay.jpg" alt="banner" class="img-responsive userProfile">
-        <div id="userProfile-content">
-            <div class="container text-center" id="userProfile-content-inner">
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="home-heading page-heading ">
-                            <h1>User Profile</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- User Profile cover Ends -->
-    <!-- Basic profile Details -->
-    <section id="basic-user-details">
-        <div class="content-box-md">
-            <div class="container">
-
-                <!-- Basic profile Details  -->
-                <div class="sub-heading">
-                    <h4>Basic Profile Details</h4>
-                </div>
-
-                <div class="details">
-                    @using (Html.BeginForm("UserProfile", "RegisteredUser", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                    {
-
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group text-left">
-                                    @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
-                                    <div>
-                                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your first name" } })
-                                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group text-left">
-                                    @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
-                                    <div>
-                                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your last name" } })
-                                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group text-left">
-                                    @Html.LabelFor(model => model.SecondaryEmailAddress, "Email *", htmlAttributes: new { @class = "control-label" })
-                                    <div>
-                                        @Html.EditorFor(model => model.SecondaryEmailAddress, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your email address" } })
-                                        @Html.ValidationMessageFor(model => model.SecondaryEmailAddress, "", new { @class = "text-danger" })
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group text-left">
-                                    @Html.LabelFor(model => model.DOB, "Date Of Birth", htmlAttributes: new { @class = "control-label" })
-                                    <div>
-                                        @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your date of birth", @type = "date" } })
-                                        @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group text-left">
-                                    <label>Gender</label>
-                                    <select class="form-control" id="gender" name="gender">
-                                        <option value="">Select your gender</option>
-                                        @foreach (NotesMarketPlace.Models.ReferenceData t in type)
-                                        {
-                                            if (t.RefCategory == "Gender" && t.IsActive == true)
-                                            {
-                                                <option value="@t.ID">@t.Value</option>
-                                            }
-                                        }
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group text-left ">
-
-                                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0;">
-                                        @Html.LabelFor(model => model.Phone_Number, "Phone Number", htmlAttributes: new { @class = "control-label" })
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-3 col-xs-3 tel01">
-                                            <select class="form-control" id="Phone_number_Country_Code" name="Phone_number_Country_Code">
-
-                                                @foreach (NotesMarketPlace.Models.Country c in country)
-                                                {
-                                                    <option value="@c.CountryCode">+@c.CountryCode</option>
-                                                }
-
-
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-9 col-md-9 col-xs-9 tel">
-
-                                            @Html.EditorFor(model => model.Phone_Number, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your phone number", @type = "tel" } })
-                                            @Html.ValidationMessageFor(model => model.Phone_Number, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                @Html.LabelFor(model => model.Profile_Picture, "Profile Picture", new { @style = "margin-top: 20px;" })
-                                <div class="show-pic">
-                                    <label for="Profile_Picture">
-                                        <img src="~/images/User-Profile/upload.png" alt="Profile Picture">
-                                        <p id="Profile_Picturefilename">Upload a picture</p>
-                                    </label>
-                                    @Html.TextBoxFor(model => model.Profile_Picture, new { @type = "file", @class = "form-control" })
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <!-- Address Details -->
-                        <div class="sub-heading">
-                            <h4 style="padding-top:50px;">Address Details</h4>
-                        </div>
-
-                        <div class="details">
-
-
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.Address_Line_1, "Address Line 1 *", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.Address_Line_1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your address" } })
-                                            @Html.ValidationMessageFor(model => model.Address_Line_1, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.Address_Line_2, "Address Line 2", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.Address_Line_2, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your address" } })
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.City, "City *", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your city" } })
-                                            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.State, "State *", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your state" } })
-                                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.ZipCode, "Zip Code *", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your zipcode" } })
-                                            @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.Country, "Country *", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your country" } })
-                                            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <!-- University and College Information -->
-                        <div class="sub-heading">
-                            <h4>University and College Information</h4>
-                        </div>
-
-                        <div class="details">
-
-                            <div class="row">
-
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.University, "University", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.University, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your university" } })
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group text-left">
-                                        @Html.LabelFor(model => model.College, "College", htmlAttributes: new { @class = "control-label" })
-                                        <div>
-                                            @Html.EditorFor(model => model.College, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your college" } })
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                        <div>
-                            <button class="btn btn-sell" type="submit">submit</button>
-                        </div>
-                    }
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-    <!-- Basic book Details Ends -->
-    <!-- Footer -->
-    <footer class="text-left navbar-bottom">
-        <hr>
-        <div class="container-fluid">
+@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/Shared/Front_user.cshtml";
+}
+
+
+<!-- User Profile cover -->
+<section id="userProfile">
+    <img src="~/images/Search/banner-with-overlay.jpg" alt="banner" class="img-responsive userProfile">
+    <div id="userProfile-content">
+        <div class="container text-center" id="userProfile-content-inner">
             <div class="row">
-                <div class="col-md-6 col-sm-8 col-xs-8 para">
-                    <p style="margin-left: 150px;">
-                        Copyright &copy; TatvaSoft All rights reserved.
-                    </p>
-                </div>
+                <div class="col-md-12">
 
-                <div class="col-md-6 col-sm-4 col-xs-4 list">
-                    <ul class="social-list text-right" style="margin-right: 150px;">
-                        <li><a href="#"><img src="~/images/remainingImage/facebook.png"></a></li>
-                        <li><a href="#"><img src="~/images/remainingImage/twitter.png"></a></li>
-                        <li><a href="#"><img src="~/images/remainingImage/linkedin.png"></a></li>
-                    </ul>
+                    <div class="home-heading page-heading ">
+                        <h1>User Profile</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- Footer Ends -->
+    </div>
+
+</section>
+<!-- User Profile cover Ends -->
+<!-- Basic profile Details -->
+<section id="basic-user-details">
+    <div class="content-box-md">
+        <div class="container">
+
+            <!-- Basic profile Details  -->
+            <div class="sub-heading">
+                <h4>Basic Profile Details</h4>
+            </div>
+
+            <div class="details">
+                @using (Html.BeginForm("UserProfile", "RegisteredUser", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group text-left">
+                                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your first name" } })
+                                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group text-left">
+                                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your last name" } })
+                                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group text-left">
+                                @Html.LabelFor(model => model.SecondaryEmailAddress, "Email *", htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.SecondaryEmailAddress, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your email address" } })
+                                    @Html.ValidationMessageFor(model => model.SecondaryEmailAddress, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group text-left">
+                                @Html.LabelFor(model => model.DOB, "Date Of Birth", htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your date of birth", @type = "date" } })
+                                    @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group text-left">
+                                <label>Gender</label>
+                                <select class="form-control" id="gender" name="gender">
+                                    <option value="">Select your gender</option>
+                                    @foreach (NotesMarketPlace.Models.ReferenceData t in type)
+                                    {
+                                        if (t.RefCategory == "Gender" && t.IsActive == true)
+                                        {
+                                            <option value="@t.ID">@t.Value</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group text-left ">
+
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0;">
+                                    @Html.LabelFor(model => model.Phone_Number, "Phone Number", htmlAttributes: new { @class = "control-label" })
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-3 col-xs-3 tel01">
+                                        <select class="form-control" id="Phone_number_Country_Code" name="Phone_number_Country_Code">
+
+                                            @foreach (NotesMarketPlace.Models.Country c in country)
+                                            {
+                                                <option value="@c.CountryCode">+@c.CountryCode</option>
+                                            }
 
 
-    <script>
-        //For Profile Picture
-        var input_var = document.getElementById('Profile_Picture');
-        var infoArea = document.getElementById('Profile_Picturefilename');
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-9 col-md-9 col-xs-9 tel">
+
+                                        @Html.EditorFor(model => model.Phone_Number, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your phone number", @type = "tel" } })
+                                        @Html.ValidationMessageFor(model => model.Phone_Number, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            @Html.LabelFor(model => model.Profile_Picture, "Profile Picture", new { @style = "margin-top: 20px;" })
+                            <div class="show-pic">
+                                <label for="Profile_Picture">
+                                    <img src="~/images/User-Profile/upload.png" alt="Profile Picture">
+                                    <p id="Profile_Picturefilename">Upload a picture</p>
+                                </label>
+                                @Html.TextBoxFor(model => model.Profile_Picture, new { @type = "file", @class = "form-control" })
+                            </div>
+                        </div>
+
+                    </div>
 
 
-        if (input_var) {
-            input_var.addEventListener('change', showFileName);
-        }
 
 
-        function showFileName(event) {
+                    <!-- Address Details -->
+                    <div class="sub-heading">
+                        <h4 style="padding-top:50px;">Address Details</h4>
+                    </div>
 
-            // the change event gives us the input it occurred in
-            var input_var = event.srcElement;
-
-            // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-            var fileName = input_var.files[0].name;
-
-            // use fileName however fits your app best, i.e. add it into a div
-            infoArea.textContent = 'Notes name: ' + fileName;
-        }
-
-    </script>
+                    <div class="details">
 
 
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.Address_Line_1, "Address Line 1 *", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.Address_Line_1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your address" } })
+                                        @Html.ValidationMessageFor(model => model.Address_Line_1, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
 
-    <!-- JQuery -->
-    <script src="~/Scripts/jquery.min.js"></script>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.Address_Line_2, "Address Line 2", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.Address_Line_2, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your address" } })
 
-    <!-- Bootstrap JS -->
-    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Custom JS -->
-    <script src="~/Scripts/script.js"></script>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.City, "City *", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your city" } })
+                                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
 
-</body>
-</html>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.State, "State *", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your state" } })
+                                        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.ZipCode, "Zip Code *", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your zipcode" } })
+                                        @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.Country, "Country *", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your country" } })
+                                        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- University and College Information -->
+                    <div class="sub-heading">
+                        <h4>University and College Information</h4>
+                    </div>
+
+                    <div class="details">
+
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.University, "University", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.University, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your university" } })
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group text-left">
+                                    @Html.LabelFor(model => model.College, "College", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        @Html.EditorFor(model => model.College, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your college" } })
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div>
+                        <button class="btn btn-sell" type="submit">submit</button>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- Basic book Details Ends -->
+
+
+<script>
+    //For Profile Picture
+    var input_var = document.getElementById('Profile_Picture');
+    var infoArea = document.getElementById('Profile_Picturefilename');
+
+
+    if (input_var) {
+        input_var.addEventListener('change', showFileName);
+    }
+
+
+    function showFileName(event) {
+
+        // the change event gives us the input it occurred in
+        var input_var = event.srcElement;
+
+        // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+        var fileName = input_var.files[0].name;
+
+        // use fileName however fits your app best, i.e. add it into a div
+        infoArea.textContent = 'Notes name: ' + fileName;
+    }
+
+</script>
+
