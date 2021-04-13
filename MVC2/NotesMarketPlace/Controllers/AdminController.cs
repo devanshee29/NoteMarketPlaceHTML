@@ -42,7 +42,8 @@ namespace NotesMarketPlace.Controllers
         {
             string message = "";
             var v = db.Users.Where(a => a.EmailID == l.EmailID).FirstOrDefault();
-            if (v != null)
+            var p = db.UserProfiles.Where(a => a.UserID == v.ID).FirstOrDefault();
+            if (v != null && v.RoleID!=1)
             {
                 if (string.Compare(l.Password, Crypto.Decrypt(v.Password)) == 0)
                 {
@@ -55,7 +56,8 @@ namespace NotesMarketPlace.Controllers
                     Response.Cookies.Add(cookie);
                     Session["EmailID"] = l.EmailID;
                     Session["ID"] = v.ID;
-
+                    Session["ProfilePicture"] = p.Profile_Picture;
+                    Session["RoleID"] = v.RoleID;
 
                     if (Url.IsLocalUrl(ReturnUrl))
                     {
@@ -64,7 +66,7 @@ namespace NotesMarketPlace.Controllers
                     else
                     {
                         int id = (int)Session["ID"];
-                        return RedirectToAction("AddAdministrator", "Admin");
+                        return RedirectToAction("Dashboard", "Admin");
                     }
 
                 }
@@ -286,68 +288,73 @@ namespace NotesMarketPlace.Controllers
         {
             if (ModelState.IsValid)
             {
-
-                var isExist = IsEmailExist(administrator.EmailID);
-                if (isExist)
+                if ((int)Session["RoleID"] == 1001)
                 {
-                    ModelState.AddModelError("EmailExist", "Email already exist");
-                    return View(administrator);
+
+                    var isExist = IsEmailExist(administrator.EmailID);
+                    if (isExist)
+                    {
+                        ModelState.AddModelError("EmailExist", "Email already exist");
+                        return View(administrator);
+                    }
+                    String Password = Membership.GeneratePassword(12, 0);
+
+                    User admindata = new User
+                    {
+                        FirstName = administrator.FirstName,
+                        LastName = administrator.LastName,
+                        EmailID = administrator.EmailID,
+                        Password = Crypto.Hash(Password),
+                        IsEmailVerified = true,
+                        IsActive = true,
+                        RoleID = 2,
+                        CreatedDate = DateTime.Now,
+                        ConfirmPassword = Crypto.Hash(Password)
+                    };
+                    db.Users.Add(admindata);
+
+                    string decryptPassword = Crypto.Decrypt(admindata.Password);
+
+                    MailMessage mm = new MailMessage("notesmarketplacesrs@gmail.com", administrator.EmailID);
+
+                    mm.Subject = "Note Marketplace - Password";
+                    mm.Body = "Hello " + administrator.FirstName + " " + administrator.LastName +
+                                     ",<br><br>This is your Password for Notes MArketPlace account.<br><br>Password:" + Password + " <br/><br/>Regards,<br>Notes Marketplace";
+
+                    mm.IsBodyHtml = true;
+
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.Port = 587;
+                    smtp.UseDefaultCredentials = false;
+
+                    NetworkCredential nc = new NetworkCredential("notesmarketplacesrs@gmail.com", "NotesMP@123");
+                    smtp.EnableSsl = true;
+                    smtp.Credentials = nc;
+                    smtp.Send(mm);
+
+                    var userprofile = new UserProfile
+                    {
+                        Phone_Number = administrator.Phone_Number,
+                        Phone_number_Country_Code = administrator.Phone_number_Country_Code,
+                        Address_Line_1 = "XYZ",
+                        Address_Line_2 = "ABC",
+                        City = "ABC",
+                        State = "ABC",
+                        ZipCode = "123456",
+                        Country = "ABC",
+                        University = "ABC",
+                        College = "ABC",
+                        CreatedDate = DateTime.Now
+                    };
+                    db.UserProfiles.Add(userprofile);
+                    db.SaveChanges();
                 }
-                String Password = Membership.GeneratePassword(12, 0);
-
-                User admindata = new User
-                {
-                    FirstName = administrator.FirstName,
-                    LastName = administrator.LastName,
-                    EmailID = administrator.EmailID,
-                    Password = Crypto.Hash(Password),
-                    IsEmailVerified = true,
-                    IsActive = true,
-                    RoleID = 2,
-                    CreatedDate = DateTime.Now,
-                    ConfirmPassword = Crypto.Hash(Password)
-                };
-                db.Users.Add(admindata);
-
-                string decryptPassword = Crypto.Decrypt(admindata.Password);
-
-                MailMessage mm = new MailMessage("notesmarketplacesrs@gmail.com", administrator.EmailID);
-
-                mm.Subject = "Note Marketplace - Password";
-                mm.Body = "Hello " + administrator.FirstName + " " + administrator.LastName +
-                                 ",<br><br>This is your Password for Notes MArketPlace account.<br><br>Password:" + Password + " <br/><br/>Regards,<br>Notes Marketplace";
-
-                mm.IsBodyHtml = true;
-
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.UseDefaultCredentials = false;
-
-                NetworkCredential nc = new NetworkCredential("notesmarketplacesrs@gmail.com", "NotesMP@123");
-                smtp.EnableSsl = true;
-                smtp.Credentials = nc;
-                smtp.Send(mm);
-
-                var userprofile = new UserProfile
-                {
-                    Phone_Number = administrator.Phone_Number,
-                    Phone_number_Country_Code = administrator.Phone_number_Country_Code,
-                    Address_Line_1 = "XYZ",
-                    Address_Line_2 = "ABC",
-                    City = "ABC",
-                    State = "ABC",
-                    ZipCode = "123456",
-                    Country = "ABC",
-                    University = "ABC",
-                    College = "ABC",
-                    CreatedDate = DateTime.Now
-                };
-                db.UserProfiles.Add(userprofile);
-                db.SaveChanges();
+                
             }
             ModelState.Clear();
-            return RedirectToAction("Login", "Admin");
+            return RedirectToAction("Dashboard", "Admin");
+
         }
 
         [HttpGet]
@@ -378,7 +385,7 @@ namespace NotesMarketPlace.Controllers
                     db.SaveChanges();
                 }
             }
-            return RedirectToAction("Login", "Admin");
+            return RedirectToAction("Dashboard", "Admin");
         }
 
 
@@ -484,7 +491,7 @@ namespace NotesMarketPlace.Controllers
         }
 
         [HttpGet]
-        public ActionResult Member(int? i, string search)
+        public ActionResult Member(int? i, string search,string sort)
         {
              List<User> user = db.Users.Where(e => e.RoleID==1 && e.IsActive).ToList();
            
@@ -517,29 +524,60 @@ namespace NotesMarketPlace.Controllers
                 TempData[id1 + " earned"] = money;
                 TempData[id1 + " expenses"] = expenses;
             }
+            if (!String.IsNullOrEmpty(sort))
+            {
+                if (sort.Equals("FirstName"))
+                {
+                    user = user.OrderBy(e => e.FirstName).ToList();
+                }
+                if (sort.Equals("LastName"))
+                {
+                    user = user.OrderBy(e => e.LastName).ToList();
+                }
+                if (sort.Equals("EmailID"))
+                {
+                    user = user.OrderBy(e => e.EmailID).ToList();
+                }
+                if (sort.Equals("JoiningDate"))
+                {
+                    user = user.OrderBy(e => e.CreatedDate).ToList();
+                }
+            }
+            if (!String.IsNullOrEmpty(search))
+            {
+                user = user.Where(e => e.FirstName.ToLower().Contains(search.ToLower())).ToList();
+            }
 
             return View(user.ToPagedList(i ?? 1, 5));
         }
             
         [HttpGet]
-        public ActionResult ManageAdministrator(int? i, string search)
+        public ActionResult ManageAdministrator(int? i, string search,string sort)
         {
-            List<User> user = db.Users.Where(e => e.RoleID == 2).ToList();
-            
-            if (!String.IsNullOrEmpty(search))
-            {
-                user = user.Where(e => e.FirstName.ToLower().Contains(search.ToLower())).ToList();
-                if (user == null)
+                List<User> user = db.Users.Where(e => e.RoleID == 2).ToList();
+
+                if (!String.IsNullOrEmpty(search))
                 {
-                    user = user.Where(e => e.LastName.ToLower().Contains(search.ToLower())).ToList();
-                    if(user==null)
+                    user = user.Where(e => e.FirstName.ToLower().Contains(search.ToLower())).ToList();
+                    if (user == null)
                     {
-                        user = user.Where(e => e.EmailID.ToLower().Contains(search.ToLower())).ToList();
+                        user = user.Where(e => e.LastName.ToLower().Contains(search.ToLower())).ToList();
+                        if (user == null)
+                        {
+                            user = user.Where(e => e.EmailID.ToLower().Contains(search.ToLower())).ToList();
+                        }
+                    }
+
+                }
+                if (!String.IsNullOrEmpty(sort))
+                {
+                    if (sort.Equals("FirstName"))
+                    {
+                        user = user.OrderBy(e => e.FirstName).ToList();
                     }
                 }
-
-            }
-            return View(user.ToPagedList(i ?? 1, 5));
+               return View(user.ToPagedList(i ?? 1, 5));
+            
         }
 
         public ActionResult DeleteAdmin(int id)
@@ -560,6 +598,11 @@ namespace NotesMarketPlace.Controllers
             ViewData["Status"] = db.ReferenceDatas.ToList<ReferenceData>();
             ViewData["User"] = db.Users.ToList<User>();
             
+            foreach(SellerNote s in notes)
+            {
+                SellerNotesAttachment fileDetail = db.SellerNotesAttachments.Where(e => e.NoteID == s.ID).FirstOrDefault();
+                TempData[s.ID.ToString() + "path"] = fileDetail.FilePath;
+            }
             if (!String.IsNullOrEmpty(search))
             {
                 notes = notes.Where(e => e.Title.ToLower().Contains(search.ToLower())).ToList();
@@ -577,6 +620,7 @@ namespace NotesMarketPlace.Controllers
             SellerNote v = db.SellerNotes.Where(e => e.ID.ToString().Equals(id)).FirstOrDefault();
             v.Status = 11;
             v.ActionedBy = (int)Session["ID"];
+            v.PublishedDate = DateTime.Now;
             db.SaveChanges();
             return RedirectToAction("NotesUnderReview", "Admin");
         }
@@ -596,14 +640,145 @@ namespace NotesMarketPlace.Controllers
             db.SaveChanges();
             return RedirectToAction("NotesUnderReview", "Admin");
         }
+        public ActionResult Unpublish(string id)
+        {
+            SellerNote v = db.SellerNotes.Where(e => e.ID.ToString().Equals(id)).FirstOrDefault();
+            v.Status = 13;
+            v.ActionedBy = (int)Session["ID"];
+            db.SaveChanges();
+            return RedirectToAction("PublishedNotes", "Admin");
+        }
 
         [HttpGet]
-        public ActionResult PublishNote()
+        public ActionResult PublishedNotes(int? i,string search,string seller)
         {
             List<SellerNote> notes = db.SellerNotes.Where(e => e.IsActive == true && e.Status == 11).ToList();
             ViewData["Category"] = db.NoteCategories.ToList<NoteCategory>();
-            ViewData["User"] = db.Users.ToList<User>();
-            return View(notes);
+            ViewData["User"] = db.Users.Where(e => e.IsActive).ToList<User>();
+            ViewData["Buyer"] = db.Users.Where(e => e.IsActive).ToList();
+            if (!String.IsNullOrEmpty(search))
+            {
+                notes = notes.Where(e => e.Title.ToLower().Contains(search.ToLower())).ToList();
+            }
+            if (seller != "Seller" && !String.IsNullOrEmpty(seller))
+            {
+                notes = notes.Where(e => e.SellerID == Convert.ToInt32(seller)).ToList();
+            }
+            foreach (SellerNote s in notes)
+            {
+                List<Download> Download = db.Downloads.Where(e => e.NoteID ==s.ID  && e.IsSellerHasAllowedDownload == true && e.IsAttachmentDownloaded == true).ToList();
+                string id1 = Convert.ToString(s.ID);
+                TempData[id1] = Download.Count;
+
+                SellerNotesAttachment fileDetail = db.SellerNotesAttachments.Where(e => e.NoteID == s.ID).FirstOrDefault();
+                TempData[s.ID.ToString() + "path"] = fileDetail.FilePath;
+            }
+                return View(notes.ToPagedList(i ?? 1, 5));
+        }
+
+        [HttpGet]
+        public ActionResult DownloadedNotes(int? i,string search,string Notes)
+        {
+            List<Download> notes = db.Downloads.Where(e => e.IsAttachmentDownloaded && e.IsSellerHasAllowedDownload).ToList();
+            
+             ViewData["Seller"] = db.Users.Where(e=>e.IsActive).ToList();
+             ViewData["Buyer"] = db.Users.Where(e=>e.IsActive).ToList();
+            ViewData["Notes"] = db.SellerNotes.ToList<SellerNote>().Select(e => e.Title).Distinct().ToList();
+            ViewData["Users"] = db.Users.ToList<User>().Select(e=>e.FirstName).Distinct().ToList();
+            
+            foreach(Download d in notes)
+            {
+                    SellerNotesAttachment fileDetail = db.SellerNotesAttachments.Where(e => e.NoteID == d.NoteID).FirstOrDefault();
+                    TempData[d.NoteID.ToString() + "path"] = fileDetail.FilePath;
+                
+            }
+            if (!String.IsNullOrEmpty(search))
+            {
+                notes = notes.Where(e => e.NoteTitle.ToLower().Contains(search.ToLower())).ToList();
+            }
+            if (Notes != "Select note" && !String.IsNullOrEmpty(Notes))
+            {
+                notes = notes.Where(e => e.NoteTitle.ToLower().Contains(Notes.ToLower())).ToList();
+            }
+            return View(notes.ToPagedList(i ?? 1, 5));
+        }
+
+        [HttpGet]
+        public ActionResult RejectedNotes(int? i,string search,string seller)
+        {
+            List<SellerNote> notes = db.SellerNotes.Where(e => e.IsActive == true && e.Status == 12).ToList();
+            foreach(SellerNote s in notes)
+            {
+                SellerNotesAttachment fileDetail = db.SellerNotesAttachments.Where(e => e.NoteID == s.ID).FirstOrDefault();
+                TempData[s.ID.ToString() + "path"] = fileDetail.FilePath;
+            }
+            ViewData["Category"] = db.NoteCategories.ToList<NoteCategory>();
+            ViewData["Seller"] = db.Users.ToList();
+            ViewData["RejectedBy"] = db.Users.ToList();
+            if (!String.IsNullOrEmpty(search))
+            {
+                notes = notes.Where(e => e.Title.ToLower().Contains(search.ToLower())).ToList();
+            }
+            if (seller != "Seller" && !String.IsNullOrEmpty(seller))
+            {
+                notes = notes.Where(e => e.SellerID == Convert.ToInt32(seller)).ToList();
+            }
+            return View(notes.ToPagedList(i ?? 1, 5));
+        }
+
+        [HttpGet]
+        public ActionResult Dashboard(int? i,string search,string month)
+        {
+            DateTime date = DateTime.Now.AddMonths(-6);
+            List<SellerNote> notes = db.SellerNotes.Where(e => e.IsActive == true && e.Status == 11 && e.CreatedDate > date).ToList();
+            ViewData["Category"] = db.NoteCategories.ToList<NoteCategory>();
+            ViewData["Seller"] = db.Users.ToList();
+            foreach (SellerNote s in notes)
+            {
+                List<Download> Download = db.Downloads.Where(e => e.NoteID == s.ID && e.IsSellerHasAllowedDownload == true && e.IsAttachmentDownloaded == true).ToList();
+                string id1 = Convert.ToString(s.ID);
+                TempData[id1] = Download.Count;
+
+                SellerNotesAttachment fileDetail = db.SellerNotesAttachments.Where(e => e.NoteID == s.ID).FirstOrDefault();
+                FileInfo file = new FileInfo(fileDetail.FilePath);
+                string size = " B";
+                long filesize = file.Length;
+                if (filesize >= 1024 * 1024)
+                {
+                    filesize = filesize / (1024 * 1024);
+                    size = " MB";
+                }
+                else if (filesize >= 1024)
+                {
+                    filesize /= 1024;
+                    size = " KB";
+                }
+                TempData[s.ID.ToString() + "path"] = fileDetail.FilePath;
+                TempData[s.ID.ToString() + "mb"] = filesize.ToString() + size;
+            }
+            List<SellerNote> inreview = db.SellerNotes.Where(e => e.IsActive == true && e.Status == 10).ToList();
+            ViewBag.InReview = inreview.Count;
+            var dt = DateTime.Now.AddDays(-7);
+            List<SellerNote> note7 = db.SellerNotes.Where(e => e.IsActive == true && e.Status == 11 && e.CreatedDate>dt).ToList();
+            int count = 0;
+            foreach(SellerNote s in note7)
+            { 
+                List<Download> download = db.Downloads.Where(e =>e.NoteID==s.ID && e.IsAttachmentDownloaded && e.IsSellerHasAllowedDownload).ToList();
+                count += download.Count;
+
+            }
+            ViewBag.Download = count;
+            List<User> user7 = db.Users.Where(e => e.IsActive == true && e.RoleID==1 && e.CreatedDate > dt).ToList();
+            ViewBag.User = user7.Count;
+            if (!String.IsNullOrEmpty(search))
+            {
+                notes = notes.Where(e => e.Title.ToLower().Contains(search.ToLower())).ToList();
+            }
+            if (!String.IsNullOrEmpty(month))
+            {
+                notes = notes.Where(e => e.CreatedDate.Value.ToString("MMMM yyyy") == month).ToList();
+            }
+            return View(notes.ToPagedList(i ?? 1, 5));
         }
 
     }

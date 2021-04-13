@@ -37,7 +37,6 @@ namespace NotesMarketPlace.Models
         public Nullable<int> CreatedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<int> ModifiedBy { get; set; }
-    
         public virtual SellerNote SellerNote { get; set; }
         public virtual User User { get; set; }
         public virtual User User1 { get; set; }

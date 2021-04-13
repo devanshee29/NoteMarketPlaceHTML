@@ -88,9 +88,9 @@
                                             <img src="~/images/Dashboard/dots.png" role="button" alter="client" class="img-responsive eye" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
 
                                             <div class="dropdown-menu width-view">
-                                                <div class="dropdown-item"><a href='@Url.Action("Download", "RegisteredUser", new {path=sellerAttach.FilePath })' style="color:#333;">Download Note</a></div><br>
-                                                <div class="dropdown-item" data-target="#exampleModalCenter" data-toggle="modal">Add Reviews/Feedback</div><br>
-                                                <div class="dropdown-item" data-target="#exampleModalCenter1" data-toggle="modal">Report as Inappropriate</div><br>
+                                                <div class="dropdown-item"><a href='@Url.Action("Download", "RegisteredUser", new {path=sellerAttach.FilePath })' style="color:#333;" class="btn-admin-download">Download Note</a></div><br>
+                                                <div class="dropdown-item" data-target="#exampleModalCenter" data-toggle="modal"><a class="btn-admin-download" style="color:#333;">Add Reviews/Feedback</a></div><br>
+                                                <div class="dropdown-item" data-target="#exampleModalCenter1" data-toggle="modal"><a class="btn-admin-download" style="color:#333;">Report as Inappropriate</a></div><br>
                                             </div>
                                         </div>
                                     </td>
@@ -126,11 +126,11 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
 
-                <form>
-                    <div class="modal-header">
+                @using(Html.BeginForm( "Review", "RegisteredUser", FormMethod.Post))
+                { <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalCenterTitle">Add Review</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><img src="../images/NotesDetails/close.png"></span>
+                            <span aria-hidden="true"><img src="~/images/NotesDetails/close.png"></span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -150,14 +150,14 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="form-group text-left ">
                                 <label class="comments">Comments *</label>
-                                <textarea class="form-control box-size" id="description" value="" placeholder="Comments..." required></textarea>
+                                <textarea class="form-control box-size" name="description" id="description" value="" placeholder="Comments..." required></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-submit">submit</button>
                     </div>
-                </form>
+                }
 
             </div>
         </div>
@@ -168,8 +168,8 @@
     <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <form>
-
+                @using (Html.BeginForm())
+                {
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalCenterTitle">Report As Inappropriate</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -182,17 +182,17 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="form-group text-left ">
                                 <label class="comments">Remarks *</label>
-                                <textarea class="form-control box-size" id="description" value="" placeholder="Comments..." required></textarea>
+                                <textarea class="form-control box-size" name="description" id="description" value="" placeholder="Comments..." required></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-submit" style="width:200px;">Report an issue</button>
-                        <button type="submit" class="btn btn-submit">cancel</button>
+                        <button type="submit" class="btn btn-submit" style="width:200px;"><a href="@Url.Action("ReportAnIssue","RegisteredUser")" class="btn-admin-download" style="color:#fff;">Report an issue</a></button>
+                        <button type="submit" class="btn btn-submit"><a href="@Url.Action("MyDownload","RegisteredUser")" class="btn-admin-download" style="color:#fff;">cancel</a></button>
                     </div>
-                </form>
+                }
 
-            </div>
+                </div>
         </div>
     </div>
 

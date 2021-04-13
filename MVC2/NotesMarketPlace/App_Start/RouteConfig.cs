@@ -20,8 +20,8 @@ namespace NotesMarketPlace
             );
 
             routes.MapRoute(
-                name: "DefaultAdmin",
-                url: "{controller}/{action}/{id}",
+                name: "Login",
+                url: "Admin/{id}",
                 defaults: new { controller = "Admin", action = "Login", id = UrlParameter.Optional }
             );
 

@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-md-2 col-sm-4 col-xs-12">
                                 <div class="form-group">
-                                    <select onchange="onSubmit()" class="form-control" id="category" name="category">
+                                    <select onchange="onSubmit()" class="form-control" id="category" name="category" >
                                         <option value="">Select category</option>
                                         @foreach (NotesMarketPlace.Models.NoteCategory category1 in category)
                                         {
@@ -96,7 +96,7 @@
                             </div>
                             <div class="col-md-2 col-sm-4 col-xs-12">
                                 <div class="form-group">
-                                    <select onchange="onSubmit()" class="form-control" id="course" name="course">
+                                    <select onchange="onSubmit()" class="form-control" id="course" name="course" >
                                         <option value="">Select course</option>
                                         @foreach (var c in course)
                                         {

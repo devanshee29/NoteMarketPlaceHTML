@@ -2504,6 +2504,7 @@ div.dropdown-item {
 }
 
 
+
 /*=======================================
                 Admin My-Profile
 ========================================*/
@@ -3599,7 +3600,7 @@ textarea{
 }
 
 #downloadedNotes option {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 

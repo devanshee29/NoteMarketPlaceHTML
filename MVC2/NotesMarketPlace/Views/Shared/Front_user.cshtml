@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Admin";
+    ViewBag.Title = "Front_User";
 }
 @if (Session["ID"] != null)
 {
@@ -88,7 +88,7 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                            <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                            <img src="~/Uploadimg/@Session["ProfilePicture"]" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
 
 
                                             <div class="dropdown-menu text-center width-dashboard">
@@ -116,7 +116,7 @@
                                 <ul class="nav">
                                     <li>
                                         <div id="mobile-menu-dropdown" class="dropdown">
-                                            <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                            <img src="~/Uploadimg/@Session["ProfilePicture"]" role="button" alter="client" class="img-circle img-responsive profile" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
 
 
                                             <div class="dropdown-menu text-center width-dashboard">
@@ -252,7 +252,7 @@ else
                         <span id="mobile-nav-open-btn">&#9776;</span>
 
                         <!-- Logo -->
-                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                        <a class="navbar-brand1" href="@Url.Action("Home","RegisteredUser")">
                             <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
                         </a>
                     </div>

@@ -52,6 +52,7 @@ namespace NotesMarketPlace.Controllers
 
                 u.RoleID = 1;
                 u.IsActive = true;
+                u.CreatedDate = DateTime.Now;
                 db.Users.Add(u);
                 db.SaveChanges();
 
@@ -137,7 +138,8 @@ namespace NotesMarketPlace.Controllers
         {
             string message = "";
             var v = db.Users.Where(a => a.EmailID == l.EmailID).FirstOrDefault();
-            if (v != null)
+            var p = db.UserProfiles.Where(a => a.UserID == v.ID).FirstOrDefault();
+            if (v != null && v.IsEmailVerified==true)
             {
                 if (string.Compare(Crypto.Hash(l.Password), v.Password) == 0)
                 {
@@ -152,6 +154,14 @@ namespace NotesMarketPlace.Controllers
 
                     Session["EmailID"] = l.EmailID;
                     Session["ID"] = v.ID;
+                    if(p!=null)
+                    { 
+                        Session["ProfilePicture"] = p.Profile_Picture;
+                    }
+                    else
+                    {
+                        Session["ProfilePicture"] = "customer-1.png";
+                    }
                     int id = (int)Session["ID"];
 
                     if (Url.IsLocalUrl(ReturnUrl))
@@ -178,8 +188,7 @@ namespace NotesMarketPlace.Controllers
             return View();
         }
 
-        [HttpPost]
-        [Authorize]
+       [Authorize]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
@@ -346,6 +355,7 @@ namespace NotesMarketPlace.Controllers
             var notes_pdf = Path.GetFileName(fileName.FileName);
             string notes_pdf_path = Path.Combine(Server.MapPath("~/Uploadimg"), notes_pdf);
             fileName.SaveAs(notes_pdf_path);
+            
 
             string name = Path.GetFileName(filename);
             string preview_img_name = Path.GetFileName(preview_img);
@@ -493,7 +503,7 @@ namespace NotesMarketPlace.Controllers
                         College = u.College,
                         CreatedDate = DateTime.Now
                     };
-
+                    
                     db.UserProfiles.Add(userprofile);
                     db.SaveChanges();
                 }
@@ -867,6 +877,38 @@ namespace NotesMarketPlace.Controllers
                 return HttpNotFound();
             }
 
+        }
+        [HttpPost]
+        public ActionResult Review(string description,decimal rate)
+        {
+            SellerNotesReview sr = new SellerNotesReview
+            {
+                Comments = description,
+                Ratings = rate,
+                NoteID = 8,
+                ReviewedByID = (int)Session["ID"],
+                AgainstDownloadsID = 2014,
+                CreatedDate = DateTime.Now,
+                IsActive = true
+            };
+            db.SellerNotesReviews.Add(sr);
+            db.SaveChanges();
+            return RedirectToAction("MyDownload","RegisteredUser");
+        }
+
+        public ActionResult ReportAnIssue(string description)
+        {
+            SellerNotesReportedIssue si = new SellerNotesReportedIssue
+            {
+                NoteID=8,
+                ReportedByID=(int)Session["ID"],
+                AgainstDownloadID=2014,
+                Remarks=description,
+                CreatedDate=DateTime.Now
+            };
+            db.SellerNotesReportedIssues.Add(si);
+            db.SaveChanges();
+            return RedirectToAction("MyDownload", "RegisteredUser");
         }
 
         [HttpGet]

@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" rel="stylesheet">
     <!--Pagination-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
-    
+
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
@@ -97,11 +97,6 @@
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="65">
-
-
-
-
-
     <!-- Header -->
     <header id="admin-header">
         <nav class="navbar navbar-fixed-top">
@@ -113,7 +108,7 @@
                         <span id="mobile-nav-open-btn">&#9776;</span>
 
                         <!-- Logo -->
-                        <a class="navbar-brand1 smooth-scroll" href="#home">
+                        <a class="navbar-brand1" href="@Url.Action("Home","RegisteredUser")">
                             <img src="~/images/home/logo.png" alt="Logo" style="margin-left: 50px;">
                         </a>
                     </div>
@@ -125,27 +120,27 @@
                             <ul class="nav navbar-nav pull-right">
 
                                 <li>
-                                    <a class="smooth-scroll" href="searchNotes.html" target="_self">
+                                    <a href="@Url.Action("Dashboard", "Admin")">
                                         <b>Dashboard</b>
                                         <hr>
                                     </a>
                                 </li>
                                 <li>
-                                    <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria- expanded="false">
+                                    <a alter="client" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria- expanded="false">
                                         <b> Notes</b>
                                         <hr>
                                     </a>
                                     <div class="dropdown-menu width-notes">
-                                        <div class="dropdown-item item-01" href="#">Notes Under Review</div><br>
-                                        <div class="dropdown-item" href="#">Published Notes</div><br>
-                                        <div class="dropdown-item" href="#">Downloaded Notes</div><br>
-                                        <div class="dropdown-item" href="#">Rejected Notes</div><br>
+                                        <div class="dropdown-item item-01">@Html.ActionLink("Notes Under Review", "NotesUnderReview", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Published Notes", "PublishedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Downloaded Notes", "DownloadedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Rejected Notes", "RejectedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
 
                                     </div>
                                 </li>
-                                <li><a class="smooth-scroll" href="#"><b>Members</b></a></li>
+                                <li><a href="@Url.Action("Member", "Admin")"><b>Members</b></a></li>
                                 <li>
-                                    <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                    <a alter="client" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
                                         <b>Reports</b>
                                         <hr>
                                     </a>
@@ -155,25 +150,30 @@
                                     <hr>
                                 </li>
                                 <li>
-                                    <a class="smooth-scroll" href="#">
-                                        <b>Settings</b>
+                                    <a alter="client" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria- expanded="false">
+                                        <b> Settings</b>
                                         <hr>
                                     </a>
+                                    <div class="dropdown-menu width-notes">
+                                        <div class="dropdown-item item-01">@Html.ActionLink("Manage Category", "NotesUnderReview", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Manage Country", "PublishedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Manage Type", "DownloadedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+
+                                    </div>
+
                                 </li>
+
                                 <li>
                                     <div class="dropdown">
-                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                        <img src="~/Uploadimg/@Session["ProfilePicture"]" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
                                         <div class="dropdown-menu text-center width-dashboard">
-                                            <div class="dropdown-item" href="#">My Profile</div><br>
-                                            <div class="dropdown-item" href="#">My Downloads</div><br>
-                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
-                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
-                                            <div class="dropdown-item" href="#">Change Password</div><br>
-                                            <div class="dropdown-item item-logout" href="#">Logout</div>
+                                            <div class="dropdown-item item-01">`@Html.ActionLink("Update Profile", "MyProfile", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item">@Html.ActionLink("Change Password", "ChangePassword", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item item-logout">@Html.ActionLink("Logout", "LogOut", null, new { @class = "dropdown-box", @style = "color:#6255a5;" })</div>
                                         </div>
                                     </div>
                                 </li>
-                                <li><a class=" btn btn-login smooth-scroll" href="#" role="button"><b>Logout</b></a></li>
+                                <li><a class=" btn btn-login" href="@Url.Action("Logout","RegisteredUser")" role="button"><b>Logout</b></a></li>
 
                             </ul>
                         </div>
@@ -188,43 +188,34 @@
                             <ul class="nav">
                                 <li>
                                     <div id="mobile-menu-dropdown" class="dropdown">
-                                        <img src="~/images/Dashboard/user-img.png" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
+                                        <img src="~/Uploadimg/@Session["ProfilePicture"]" role="button" alter="client" class="img-circle img-responsive profile" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false">
 
                                         <div class="dropdown-menu text-center width-dashboard">
-                                            <div class="dropdown-item item-01" href="#">My Profile</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">My Downloads</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">My Sold Notes</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">My Rejected Notes</div><br>
-                                            <hr>
-                                            <div class="dropdown-item" href="#">Change Password</div><br>
-                                            <hr>
-                                            <div class="dropdown-item item-logout" href="#">Logout</div>
-
+                                            <div class="dropdown-item item-01">`@Html.ActionLink("Update Profile", "MyProfile", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item">@Html.ActionLink("Change Password", "ChangePassword", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item item-logout">@Html.ActionLink("Logout", "LogOut", null, new { @class = "dropdown-box", @style = "color:#333;" })</div>
                                         </div>
                                     </div>
                                 </li>
                                 <hr>
 
-                                <li><a class="smooth-scroll" href="searchNotes.html" target="_self"><b>Dashboard</b></a></li>
+                                <li><a href="@Url.Action("Dashboard", "Admin")"><b>Dashboard</b></a></li>
                                 <hr>
                                 <li>
                                     <div id="mobile-menu-dropdown1" class="dropdown">
-                                        <a alter="client" class="smooth-scroll" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b> Notes</b></a>
+                                        <a alter="client" href="#" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria-expanded="false"><b> Notes</b></a>
 
                                         <div class="dropdown-menu width-notes">
-                                            <div class="dropdown-item item-01" href="#">Notes Under Review</div><br>
-                                            <div class="dropdown-item" href="#">Published Notes</div><br>
-                                            <div class="dropdown-item" href="#">Downloaded Notes</div><br>
-                                            <div class="dropdown-item" href="#">Rejected Notes</div><br>
+                                            <div class="dropdown-item item-01">@Html.ActionLink("Notes Under Review", "NotesUnderReview", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item">@Html.ActionLink("Published Notes", "PublishedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item">@Html.ActionLink("Downloaded Notes", "DownloadedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                            <div class="dropdown-item">@Html.ActionLink("Rejected Notes", "RejectedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
                                         </div>
                                     </div>
                                 </li>
                                 <hr>
 
-                                <li><a class="smooth-scroll" href="mySoldNotes.html"><b>Members</b></a></li>
+                                <li><a href="@Url.Action("Member", "Admin")"><b>Members</b></a></li>
                                 <hr>
 
                                 <li>
@@ -239,9 +230,20 @@
                                 </li>
                                 <hr>
 
-                                <li><a class="smooth-scroll" href="contact.html"><b>Setting</b></a></li>
-                                <hr>
-                                <li><button class=" btn btn-login smooth-scroll" href="login.html"><b>Logout</b></button></li>
+                                <li>
+                                    <a alter="client" id="dropdownMenuLink" data-toggle="dropdown" ` aria-haspopup="true" aria- expanded="false">
+                                        <b> Settings</b>
+                                        <hr>
+                                    </a>
+                                    <div class="dropdown-menu width-notes">
+                                        <div class="dropdown-item item-01">@Html.ActionLink("Manage Category", "NotesUnderReview", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Manage Country", "PublishedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+                                        <div class="dropdown-item">@Html.ActionLink("Manage Type", "DownloadedNotes", null, new { @class = "dropdown-box", @style = "color:#333;" })</div><br>
+
+                                    </div>
+                                </li>
+
+                                <li><button class=" btn btn-login" href="@Url.Action("Logout","RegisteredUser")" role="button"><b>Logout</b></button></li>
                             </ul>
                         </div>
                     </div>
@@ -262,14 +264,14 @@
                     </div>
                 </div>
                 @{
-                    string DOB = String.Format("{0:dd-mm-yyyy}", Model.userprofile.DOB);
+                    string DOB = String.Format("{0:dd-MM-yyyy}", Model.userprofile.DOB);
                 }
 
                 <div class="row">
                     <div id="member-details-img" class="col-md-2 col-sm-4 col-xs-12">
                         <img src="~/Uploadimg/@Model.userprofile.Profile_Picture" alt="member-id" class="img-responsive img-member " style="height:180px; width:180px;">
                     </div>
-                    <div id="info-1" class="col-md-5 col-sm-6 col-xs-12 vr" >
+                    <div id="info-1" class="col-md-5 col-sm-6 col-xs-12 vr">
 
                         <div class="row">
                             <div class="col-md-5 col-sm-6 col-xs-5 left02" style="font-family:sans-serif;">
@@ -362,7 +364,7 @@
                             <div class="col-md-6 col-sm-6 col-xs-5 left02" style="font-family:sans-serif;">
                                 State:
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-5  right01" style="font-family:sans-serif;"> 
+                            <div class="col-md-6 col-sm-6 col-xs-5  right01" style="font-family:sans-serif;">
                                 @Model.userprofile.State
                             </div>
                         </div>
@@ -414,11 +416,11 @@
                             @{int index = 1; }
                             @foreach (var item in Model.memberdetails)
                             {
-                                string Addeddate = String.Format("{0:dd-mm-yyyy,hh:mm}", item.note.CreatedDate);
-                                string Publisheddate = String.Format("{0:dd-mm-yyyy,hh:mm}", item.note.PublishedDate);
+                                string Addeddate = String.Format("{0:dd-MM-yyyy,hh:mm}", item.note.CreatedDate);
+                                string Publisheddate = String.Format("{0:dd-MM-yyyy,hh:mm}", item.note.PublishedDate);
                                 <tr>
                                     <td class="sr-no">@index</td>
-                                    <td class="blue"><a href="@Url.Action("NoteDetails", "Admin", new { id = item.note.ID })">@item.note.Title</a></td>
+                                    <td class="blue" width="180px;"><a href="@Url.Action("NoteDetails", "Admin", new { id = item.note.ID })">@item.note.Title</a></td>
                                     <td>@item.category.Name</td>
                                     <td>@item.status.Value</td>
                                     <td class="text-center blue" style="width:100px;">@TempData[item.note.ID.ToString()]</td>
@@ -431,7 +433,7 @@
 
 
                                             <div class="dropdown-menu width-view">
-                                                <div class="dropdown-item"><a href='@Url.Action("Download", "RegisteredUser", new {path=item.attachment.FilePath })' style="color:#333;">Download Note</a></div><br>
+                                                <div class="dropdown-item item-01"><a href='@Url.Action("Download", "RegisteredUser", new {path=item.attachment.FilePath })' style="color:#333;" class="btn-admin-download">Download Note</a></div><br>
 
                                             </div>
                                         </div>
@@ -453,7 +455,7 @@
 
     <!-- Member Details -->
     <!-- Footer -->
-    <footer id="admin-footer" class="navbar-bottom">
+    <footer id="admin-footer" class="navbar-bottom navbar-fixed-bottom">
         <hr>
 
         <div class="row">
@@ -471,7 +473,6 @@
     <!-- Footer Ends -->
     <!-- JQuery -->
     <script src="~/Scripts/jquery.min.js"></script>
-
 
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script>
@@ -498,12 +499,3 @@
 
         });
     </script>
-
-    <!-- Bootstrap JS -->
-    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="~/Scripts/script.js"></script>
-
-</body>
-</html>
